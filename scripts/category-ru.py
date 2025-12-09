@@ -27,6 +27,9 @@ def main():
         "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/refs/heads/master/data/category-ru",
         "https://raw.githubusercontent.com/itdoginfo/allow-domains/refs/heads/main/Russia/outside-raw.lst",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ru.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/drweb.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/mailru.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/yandex.yaml",
     ]
 
     ru_domains = set([
@@ -75,7 +78,7 @@ def main():
 
     current_dir = Path(__file__).resolve().parent
     
-    output_path = current_dir.parent / "rules" / "domains.yaml"
+    output_path = current_dir.parent / "rules" / "category-ru.yaml"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     with output_path.open("w", encoding="utf-8") as f:

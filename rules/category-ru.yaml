@@ -41,6 +41,7 @@ payload:
     - +.alformacapital.com
     - +.altynbank.com
     - +.astrasend.net
+    - +.avito.st
     - +.baltinvestbank.com
     - +.bank131.com
     - +.bankonline.center
@@ -49,7 +50,6 @@ payload:
     - +.bitrix.info
     - +.bonus-card.ml
     - +.boosty.to
-    - +.by
     - +.careeny.xyz
     - +.careery.xyz
     - +.ccb.com
@@ -67,10 +67,12 @@ payload:
     - +.drweb-av.es
     - +.drweb-av.it
     - +.drweb-av.pl
+    - +.drweb.by
     - +.drweb.cn
     - +.drweb.co.jp
     - +.drweb.com
     - +.drweb.fr
+    - +.drweb.kz
     - +.drweb.uz
     - +.eginvestments.net
     - +.eleksir.finance
@@ -119,6 +121,7 @@ payload:
     - +.kaspersky.fr
     - +.kaspersky.gr
     - +.kaspersky.it
+    - +.kaspersky.kz
     - +.kaspersky.ma
     - +.kaspersky.my
     - +.kaspersky.nl
@@ -146,7 +149,6 @@ payload:
     - +.kubankredit.biz
     - +.kubankredit.com
     - +.kubankredit.net
-    - +.kz
     - +.lead-pro2023.online
     - +.locko-bank.info
     - +.maritimebank.com
@@ -295,7 +297,6 @@ payload:
     - +.vkuserlive.net
     - +.vkuservideo.com
     - +.vkuservideo.net
-    - +.volga
     - +.vozvratnalogov.online
     - +.vtb-direct.com
     - +.vtb-russia.com
@@ -324,11 +325,9 @@ payload:
     - +.xn----7sbcoetidz6azac4j.net
     - +.xn--80abkdqhcx2axc5i.com
     - +.xn--80adxhks
-    - +.xn--80ao21a
     - +.xn--80asehdb
     - +.xn--80aswg
     - +.xn--90aifd0aza.site
-    - +.xn--90ais
     - +.xn--c1avg
     - +.xn--d1acj3b
     - +.xn--p1acf
@@ -339,6 +338,7 @@ payload:
     - +.yandex-images.clstorage.net
     - +.yandex.aero
     - +.yandex.az
+    - +.yandex.by
     - +.yandex.cloud
     - +.yandex.co.il
     - +.yandex.com
@@ -353,6 +353,7 @@ payload:
     - +.yandex.fr
     - +.yandex.jobs
     - +.yandex.kg
+    - +.yandex.kz
     - +.yandex.lt
     - +.yandex.lv
     - +.yandex.md

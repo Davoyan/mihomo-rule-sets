@@ -40,7 +40,6 @@ payload:
     - +.alformacap.com
     - +.alformacapital.com
     - +.altynbank.com
-    - +.animevost.org
     - +.astrasend.net
     - +.avito.st
     - +.baltinvestbank.com
@@ -60,6 +59,10 @@ payload:
     - +.corona-perevod.com
     - +.coronaperevod.com
     - +.creditdevelopment.pro
+    - +.dodois.com
+    - +.dodois.io
+    - +.dodopizza.com
+    - +.dodostatic.net
     - +.doktor.kr
     - +.donationalerts.com
     - +.dorenko.tv
@@ -81,6 +84,7 @@ payload:
     - +.energotransbank.com
     - +.er-fin.com
     - +.finsb.com
+    - +.fix-price.com
     - +.four-seasons.group
     - +.gazprombank.tech
     - +.granat.az
@@ -151,12 +155,15 @@ payload:
     - +.kubankredit.com
     - +.kubankredit.net
     - +.lead-pro2023.online
+    - +.lenta.com
+    - +.lenta.tech
     - +.locko-bank.info
     - +.maritimebank.com
     - +.memealerts.com
     - +.miya-news.online
     - +.mizuhogroup.com
     - +.moscow
+    - +.mosmetro.tech
     - +.mradx.net
     - +.mufg.jp
     - +.mvk.com
@@ -247,6 +254,8 @@ payload:
     - +.t.finance
     - +.tamtam.chat
     - +.tatar
+    - +.taxsee.com
+    - +.tbank-online.com
     - +.tbankjob.site
     - +.therussiaforum.com
     - +.tinkoff-anketa.site
@@ -272,9 +281,12 @@ payload:
     - +.tochka.com
     - +.topcards.pro
     - +.topdeposit.pro
+    - +.trbcdn.net
     - +.turbopages.org
     - +.tynkoff.cc
     - +.ubs.com
+    - +.uni.rest
+    - +.unirest.tech
     - +.unistream.com
     - +.userapi.com
     - +.vakobank.com

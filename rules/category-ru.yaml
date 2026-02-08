@@ -38,7 +38,9 @@ payload:
     - +.alformacapital.com
     - +.altynbank.com
     - +.astrasend.net
+    - +.aviasales.com
     - +.avito.st
+    - +.avs.io
     - +.baltinvestbank.com
     - +.bank131.com
     - +.bankonline.center
@@ -348,6 +350,7 @@ payload:
     - +.yandex
     - +.yandex-bank.net
     - +.yandex-images.clstorage.net
+    - +.yandex-pogoda.static-storage.net
     - +.yandex.aero
     - +.yandex.az
     - +.yandex.by

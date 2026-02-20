@@ -1,5 +1,6 @@
 payload:
     - +.1018213540.rsc.cdn77.org
+    - +.24h.tv
     - +.3ds-secure-payment.com
     - +.4epenaxa.com
     - +.4meeting.me
@@ -58,6 +59,7 @@ payload:
     - +.corona-perevod.com
     - +.coronaperevod.com
     - +.creditdevelopment.pro
+    - +.dbo-dengi.online
     - +.dodois.com
     - +.dodois.io
     - +.dodopizza.com
@@ -82,6 +84,7 @@ payload:
     - +.emias.info
     - +.energotransbank.com
     - +.er-fin.com
+    - +.evrasia.rest
     - +.finsb.com
     - +.fix-price.com
     - +.four-seasons.group
@@ -133,7 +136,10 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
+    - +.keyword:tinkoff.
+    - +.keyword:yandex.
     - +.kinopoisk-ru.clstorage.net
+    - +.kinorium.com
     - +.kk.bank
     - +.korona-perevod.com
     - +.korona.com
@@ -162,6 +168,7 @@ payload:
     - +.memealerts.com
     - +.miya-news.online
     - +.mizuhogroup.com
+    - +.moex.com
     - +.moscow
     - +.mosmetro.tech
     - +.mradx.net
@@ -174,6 +181,7 @@ payload:
     - +.nationalclearingcentre.com
     - +.naydex.net
     - +.ncc-qccp.com
+    - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
     - +.oidconnect.com
@@ -190,6 +198,7 @@ payload:
     - +.perevodkorona.com
     - +.polly.events
     - +.posl-t.org
+    - +.premier.one
     - +.priovtb.com
     - +.probank.pro
     - +.procombank.com
@@ -234,9 +243,11 @@ payload:
     - +.securetpayment.com
     - +.senat.cloud
     - +.showip.net
+    - +.sistema-capital.com
     - +.slavia-bank.com
     - +.slaviabank.com
     - +.smart-cards.pro
+    - +.smotreshka.tv
     - +.smsemailstats.com
     - +.sovcombank.business
     - +.sovcombank.com
@@ -262,22 +273,15 @@ payload:
     - +.tinkoff-digital.com
     - +.tinkoff-group.com
     - +.tinkoff-osago.tk
-    - +.tinkoff.ai
-    - +.tinkoff.biz
-    - +.tinkoff.cc
-    - +.tinkoff.cloud
-    - +.tinkoff.cr
-    - +.tinkoff.do
-    - +.tinkoff.link
-    - +.tinkoff.sg
-    - +.tinkoff.tech
     - +.tinkoffdigital.com
     - +.tinkoffgroup.com
     - +.tinkoffip.site
     - +.tinkoffmobile.com
     - +.tinkoffreg.site
+    - +.tips.tips
     - +.tlnkof.xyz
     - +.tlnkoff-open.xyz
+    - +.tochka-tech.com
     - +.tochka.com
     - +.topcards.pro
     - +.topdeposit.pro

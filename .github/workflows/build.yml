@@ -1,13 +1,6 @@
 name: Build IP lists
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - ".gitignore"
-      - "LICENSE*"
-      - "*.md"
   workflow_dispatch:
   schedule:
     - cron: '0 3 * * *'

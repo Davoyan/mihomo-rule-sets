@@ -12,7 +12,7 @@ WANTED = {"RU", "BY"}
 KEYWORDS_AS = ["yandex", "kaspersky", "VKontakte", "LLC VK", "Rostelecom", "GRCHC", "ru-center", "EdgeCenter LLC", 
                "Vimpelcom", "CDNvideo", "Sovkombank", "Sberbank", "Alfa-Bank", "Russian Agricultural Bank", "ngenix", "SERVICEPIPE", "DDOS-GUARD", "Moscow city telephone network"]
                
-KEYWORDS_DOMAIN = ["yandex", "kaspersky", "beeline", "stormwall", "edgecenter", "ngenix", "servicepipe"]
+KEYWORDS_DOMAIN = ["yandex", "kaspersky", "beeline", "stormwall", "edgecenter", "ngenix", "servicepipe", "rutube"]
 
 FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "megafon.ru", "beeline.ru", "corbina.net", "mts.ru", 
                "t2.ru", "rt.ru", "rostelecom.ru", "rtcomm.ru", "ertelecom.ru", "curator.pro", "nic.ru", "nichost.ru", "edgecenter.ru", "ddos-guard.net", "kaspersky.com", "drweb.com", "drweb.ru", "avito.ru"

@@ -24,6 +24,9 @@ jobs:
 
     - name: Install dependencies
       run:  |
+        sudo apt update
+        sudo apt install -y curl wget git jq
+        bash <(curl -fsSL https://sing-box.app/deb-install.sh)
         pip install maxminddb
 
     - name: Download IPinfo Lite CSV
@@ -57,6 +60,10 @@ jobs:
         find ip-for-ru/lists -type f -name "*.yaml" -print0 | while IFS= read -r -d '' file; do
           mihomo convert-ruleset ipcidr yaml "$file" "${file%.yaml}.mrs"
         done
+
+    - name: Generate srs
+      run: |
+       sing-box rule-set compile --output /home/runner/work/ip-for-ru/ip-for-ru/lists/ips-for-ru-singbox.srs /home/runner/work/ip-for-ru/ip-for-ru/lists/ips-for-ru-singbox.json
 
     - name: Commit and push generated files
       env:

@@ -63,7 +63,7 @@ jobs:
 
     - name: Generate srs
       run: |
-       sing-box rule-set compile --output /home/runner/work/ip-for-ru/ip-for-ru/lists/ips-for-ru-singbox.srs /home/runner/work/ip-for-ru/ip-for-ru/lists/ips-for-ru-singbox.json
+       sing-box rule-set compile --output ip-for-ru/lists/ips-for-ru-singbox.srs ip-for-ru/lists/ips-for-ru-singbox.json
 
     - name: Commit and push generated files
       env:

@@ -19,7 +19,8 @@ FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "megafon.
                "sputnik.ru", "ok.ru", "rambler.ru", "ozon.ru", "reg.ru", "tinkoff.ru", "tbank.ru", "vk.com", "vk.ru", "vkontakte.ru", "vk.company", "cdnvideo.com", "cdnvideo.ru"
                "vtb.ru", "vtb.com", "vtb.ge", "vtb-bank.by", "vtb.am", "rshb.ru", "cft.ru", "variti.io", "koronapay.com", "mid.ru", "gov.ru", "rfc-cfa.ru", "farline.net",
                "donsattv.ru", "mobile-win.ru", "crelcom.ru", "xn--80ahgneri.net", "crimea-com.net", "crimea-com.ru", "ardinvest.net", "redi.su",
-               "miranda-media.ru", "realnet.ru", "d-group.online", "mageal.ru", "m3x.org", "liveproxy.ru", "meshnet.su", "mytrinet.ru"]
+               "miranda-media.ru", "realnet.ru", "d-group.online", "mageal.ru", "m3x.org", "liveproxy.ru", "meshnet.su", "mytrinet.ru", "ztv.su",
+               "bestline.su", "tkmotel.ru", "skymaxsib.ru"]
 
 
 def iso_from_maxmind(record: dict) -> str | None:

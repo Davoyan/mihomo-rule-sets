@@ -10,8 +10,7 @@ MAXMIND_MMDB = "maxmind.mmdb"
 WANTED = {"RU", "BY"}
 
 KEYWORDS_AS = ["yandex", "kaspersky", "VKontakte", "LLC VK", "Rostelecom", "GRCHC", "ru-center", "EdgeCenter LLC", 
-               "Vimpelcom", "CDNvideo", "Sovkombank", "Sberbank", "Alfa-Bank", "Russian Agricultural Bank", "ngenix", "SERVICEPIPE", "DDOS-GUARD", "Moscow city telephone network",
-               "MEDIABRIDGE UNITED LTD", "ALEF-BANK"]
+               "Vimpelcom", "CDNvideo", "Sovkombank", "Sberbank", "Alfa-Bank", "Russian Agricultural Bank", "ngenix", "SERVICEPIPE", "DDOS-GUARD", "Moscow city telephone network", "ALEF-BANK"]
                
 KEYWORDS_DOMAIN = ["yandex", "kaspersky", "beeline", "stormwall", "edgecenter", "ngenix", "servicepipe", "rutube"]
 

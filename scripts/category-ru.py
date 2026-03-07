@@ -100,7 +100,7 @@ def main():
             # 1) keyword:
             kw = transform_keyword(line)
             if kw is not None:
-                ru_domains.add(kw)
+                #ru_domains.add(kw)
                 continue
 
             # 2) domain/host/full

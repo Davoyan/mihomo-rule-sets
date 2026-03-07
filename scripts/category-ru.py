@@ -35,7 +35,7 @@ def transform_keyword(line: str) -> str | None:
         return None
 
     if s.endswith("."):
-        s = s[:-1] + "ru"
+        s = s[:-1]
 
     return "+." + s
 

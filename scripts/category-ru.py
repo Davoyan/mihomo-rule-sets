@@ -22,6 +22,7 @@ def remove_overlaps(domains: set[str]) -> list[str]:
 
 
 def transform_keyword(line: str) -> str | None:
+    return None
     if not line.startswith("keyword:"):
         return None
 

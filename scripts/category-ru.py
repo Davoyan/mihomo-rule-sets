@@ -35,7 +35,7 @@ def transform_keyword(line: str) -> str | None:
         return None
 
     if s.endswith("."):
-        s = s[:-1]
+        s = s[:-1] + ".*"
 
     return "+." + s
 
@@ -72,7 +72,7 @@ def main():
         "vkuseraudio.net", "vkuserlive.net", "vkuservideo.com", "vkuservideo.net",
         "5post.market", "chizhik.club", "okolo.app", "perekrestok.com",
         "x5.ai", "x5.com", "x5.digital", "x5.group", "x5.media", "x5.team", "x5.tech", "x5static.net",
-        "yandex.fi", "yastatic.net", "naydex.net", "yandex.fr", "yandex-bank.net", "yandex.aero",
+        "yandex.fi", "yandex", "yandex.kg", "yastatic.net", "naydex.net", "yandex.fr", "yandex-bank.net", "yandex.aero",
         "yandex.az", "yandex.by", "yandex.cloud", "yandex.jobs", "yandex.com", "yandexwebcache.org",
         "yandexcom.net", "yandexcloud.net", "yandexadexchange.net", "yandex.kg", "yandex.de",
         "yandex.ee", "yandex.eu", "rostaxi.org", "yandex.uz", "yandex.kz", "yandex.lt",
@@ -99,7 +99,7 @@ def main():
             # 1) keyword:
             kw = transform_keyword(line)
             if kw is not None:
-                #ru_domains.add(kw)
+                ru_domains.add(kw)
                 continue
 
             # 2) domain/host/full

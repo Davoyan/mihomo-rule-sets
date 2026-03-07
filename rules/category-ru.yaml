@@ -1,9 +1,40 @@
 payload:
+    - +.2gis.*
+    - +.alfa-bank.*
+    - +.alfa.*
+    - +.alfabank.*
+    - +.halva.*
+    - +.kuban-credit.*
+    - +.kubancredit.*
+    - +.perevod-korona.*
+    - +.sber.*
+    - +.sovcombank.*
+    - +.tinkoff.*
+    - +.xn----7sbcoetidz6azac4j.*
+    - +.xn--80abkdqhcx2axc5i.*
+    - +.yandex.*
     - +.1018213540.rsc.cdn77.org
+    - +.1cfresh.com
+    - +.1internet.tv
     - +.24h.tv
+    - +.3ds-secure-payment.com
+    - +.4epenaxa.com
+    - +.4meeting.me
     - +.5post.market
     - +.absolutbank.com
+    - +.aihome.dev
+    - +.aksyuterian.com
     - +.alefbank.com
+    - +.alfa-finance.com
+    - +.alfa-fx.com
+    - +.alfa-pc.com
+    - +.alfa-usa.com
+    - +.alfafinance.biz
+    - +.alfafuture.com
+    - +.alfafx.com
+    - +.alfaprivate.com
+    - +.alformacap.com
+    - +.alformacapital.com
     - +.altbank.com
     - +.altynbank.com
     - +.animego.me
@@ -14,13 +45,25 @@ payload:
     - +.avs.io
     - +.baltinvestbank.com
     - +.bank131.com
+    - +.banka-ui.dev
+    - +.bankonline.center
+    - +.beta-bank.com
+    - +.billapp.org
     - +.bitrix.info
     - +.bk.mufg.jp
+    - +.bonus-card.ml
     - +.boosty.to
+    - +.bronevik.com
+    - +.careeny.xyz
+    - +.careery.xyz
     - +.checkip.amazonaws.com
     - +.chizhik.club
+    - +.cloudpayments.world
+    - +.clstorage.net
+    - +.coloradogrowers.com
     - +.corona-perevod.com
     - +.coronaperevod.com
+    - +.creditdevelopment.pro
     - +.dbo-dengi.online
     - +.dodois.com
     - +.dodois.io
@@ -28,6 +71,8 @@ payload:
     - +.dodostatic.net
     - +.doktor.kr
     - +.donationalerts.com
+    - +.dorenko.tv
+    - +.drivercard.site
     - +.drweb-av.de
     - +.drweb-av.es
     - +.drweb-av.it
@@ -39,18 +84,27 @@ payload:
     - +.drweb.fr
     - +.drweb.kz
     - +.drweb.uz
+    - +.edadeal.io
+    - +.eginvestments.net
     - +.eleksir.finance
     - +.emias.info
     - +.energotransbank.com
     - +.er-fin.com
     - +.evrasia.rest
     - +.fix-price.com
+    - +.four-seasons.group
+    - +.gazprombank.tech
     - +.granat.az
     - +.home.bank
     - +.host1861554.hostland.pro
     - +.hva.im
     - +.ifconfig.me
+    - +.investalfabank.com
+    - +.investlaboratory.com
     - +.ipify.org
+    - +.jivochat.com
+    - +.jivosite.com
+    - +.jump.finance
     - +.kamkombank.pro
     - +.kaspersky-labs.com
     - +.kaspersky.be
@@ -87,14 +141,6 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
-    - +.keyword:halva.
-    - +.keyword:kuban-credit.
-    - +.keyword:kubancredit.
-    - +.keyword:perevod-korona.
-    - +.keyword:sovcombank.
-    - +.keyword:xn----7sbcoetidz6azac4j.
-    - +.keyword:xn--80abkdqhcx2axc5i.
-    - +.kinopoisk-ru.clstorage.net
     - +.kinorium.com
     - +.kk.bank
     - +.korona-perevod.com
@@ -102,13 +148,18 @@ payload:
     - +.korona.net
     - +.koronapay.com
     - +.koronaperevod.com
+    - +.koshelek.app
     - +.kuban.credit
+    - +.lead-pro2023.online
     - +.lenta.com
     - +.lenta.tech
+    - +.lmru.tech
     - +.locko-bank.info
     - +.mangalib.me
     - +.maritimebank.com
+    - +.megamarket.tech
     - +.memealerts.com
+    - +.miya-news.online
     - +.mizuhogroup.com
     - +.moex.com
     - +.moscow
@@ -116,6 +167,8 @@ payload:
     - +.mradx.net
     - +.mvk.com
     - +.mycdn.me
+    - +.nasporte.life
+    - +.nasporte.pro
     - +.nationalclearingcenter.com
     - +.nationalclearingcentre.com
     - +.naydex.net
@@ -123,6 +176,7 @@ payload:
     - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
+    - +.oidconnect.com
     - +.okko.sport
     - +.okko.tv
     - +.okolo.app
@@ -130,6 +184,8 @@ payload:
     - +.paywb.com
     - +.perekrestok.com
     - +.perevodkorona.com
+    - +.polly.events
+    - +.posl-t.org
     - +.premier.one
     - +.priovtb.com
     - +.probank.pro
@@ -148,26 +204,74 @@ payload:
     - +.ru.com
     - +.ru.net
     - +.rusagrobank.com
+    - +.russiacalling.com
+    - +.sber-impulse.com
+    - +.sberanalytics.com
+    - +.sberbank-cib.com
+    - +.sberbank-pb.com
+    - +.sberbank.co.in
     - +.sberbank.com
+    - +.sberbankinvestmentresearch.com
+    - +.sberbusiness.live
+    - +.sbercoin.com
+    - +.sberdocs.com
+    - +.sberfinance.net
+    - +.sberimpulse.com
+    - +.sberlabs.com
+    - +.sberpay.vip
+    - +.sberpravo.info
+    - +.sberpravo.tech
+    - +.sbruss.store
     - +.scb.im
+    - +.securetpayment.com
+    - +.senat.cloud
     - +.set.ki
     - +.showip.net
     - +.sistema-capital.com
     - +.slavia-bank.com
     - +.slaviabank.com
+    - +.smart-cards.pro
     - +.smotreshka.tv
+    - +.smsemailstats.com
     - +.spbbank.com
+    - +.static-storage.net
     - +.su
+    - +.svoy.academy
+    - +.svy59w.shop
+    - +.t-atm.org
+    - +.t-avia.org
+    - +.t-capy.org
+    - +.t-gorod.org
+    - +.t-tps.org
+    - +.t.finance
     - +.t1.cloud
     - +.tamtam.chat
     - +.tatar
     - +.taxsee.com
     - +.tbank-online.com
+    - +.tbankjob.site
+    - +.therussiaforum.com
+    - +.timeweb.cloud
+    - +.timeweb.com
+    - +.tinkoff-anketa.site
+    - +.tinkoff-digital.com
+    - +.tinkoff-group.com
+    - +.tinkoff-osago.tk
+    - +.tinkoffdigital.com
+    - +.tinkoffgroup.com
+    - +.tinkoffip.site
+    - +.tinkoffmobile.com
+    - +.tinkoffreg.site
     - +.tips.tips
+    - +.tlnkof.xyz
+    - +.tlnkoff-open.xyz
     - +.tochka-tech.com
     - +.tochka.com
+    - +.topcards.pro
+    - +.topdeposit.pro
     - +.trbcdn.net
     - +.turbopages.org
+    - +.tynkoff.cc
     - +.ubs.com
     - +.uni.rest
     - +.unirest.tech
@@ -196,8 +300,24 @@ payload:
     - +.vkuserlive.net
     - +.vkuservideo.com
     - +.vkuservideo.net
+    - +.vozvratnalogov.online
+    - +.vtb-direct.com
+    - +.vtb-russia.com
+    - +.vtb.bank.in
+    - +.vtb.com
+    - +.vtb.digital
+    - +.vtb.promo
+    - +.vtb24.com
+    - +.vtbcareer.com
+    - +.vtbglobalperspectives.com
+    - +.vtbindia.com
+    - +.vtbkep.site
+    - +.vtbpartners.com
+    - +.vtbrussia.com
     - +.webvisor.com
     - +.webvisor.org
+    - +.whoosh.bike
+    - +.womba-t.org
     - +.x5.ai
     - +.x5.com
     - +.x5.digital
@@ -209,6 +329,7 @@ payload:
     - +.xn--80adxhks
     - +.xn--80asehdb
     - +.xn--80aswg
+    - +.xn--90aifd0aza.site
     - +.xn--c1avg
     - +.xn--d1acj3b
     - +.xn--p1acf
@@ -216,8 +337,6 @@ payload:
     - +.yads.tech
     - +.yandex
     - +.yandex-bank.net
-    - +.yandex-images.clstorage.net
-    - +.yandex-pogoda.static-storage.net
     - +.yandex.aero
     - +.yandex.az
     - +.yandex.by
@@ -259,3 +378,5 @@ payload:
     - +.yastatic.net
     - +.yclients.com
     - +.youla.io
+    - +.za-group.net
+    - +.zentotem.net

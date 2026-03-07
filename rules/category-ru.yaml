@@ -1,17 +1,4 @@
 payload:
-    - +.2gis
-    - +.alfa
-    - +.alfa-bank
-    - +.alfabank
-    - +.halva
-    - +.kuban-credit
-    - +.kubancredit
-    - +.perevod-korona
-    - +.sber
-    - +.sovcombank
-    - +.tinkoff
-    - +.xn----7sbcoetidz6azac4j
-    - +.xn--80abkdqhcx2axc5i
     - +.1018213540.rsc.cdn77.org
     - +.1cfresh.com
     - +.1internet.tv
@@ -140,6 +127,20 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
+    - +.keyword:2gis.
+    - +.keyword:alfa-bank.
+    - +.keyword:alfa.
+    - +.keyword:alfabank.
+    - +.keyword:halva.
+    - +.keyword:kuban-credit.
+    - +.keyword:kubancredit.
+    - +.keyword:perevod-korona.
+    - +.keyword:sber.
+    - +.keyword:sovcombank.
+    - +.keyword:tinkoff.
+    - +.keyword:xn----7sbcoetidz6azac4j.
+    - +.keyword:xn--80abkdqhcx2axc5i.
+    - +.keyword:yandex.
     - +.kinorium.com
     - +.kk.bank
     - +.korona-perevod.com

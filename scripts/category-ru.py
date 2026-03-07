@@ -54,6 +54,9 @@ def main():
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/avito.list",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/yandex.list",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/kaspersky.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/wildberries.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/geo/geosite/ozon.list",
+        "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-bank-ru.list",
     ]
 
     ru_domains = set([

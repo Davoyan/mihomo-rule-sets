@@ -1,4 +1,4 @@
-name: Build IP lists
+name: Build RU dommains lists
 
 on:
   workflow_dispatch:

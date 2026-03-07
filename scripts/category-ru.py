@@ -64,7 +64,7 @@ def main():
     ]
 
     ru_domains = set([
-        "2ip.ru", "yandex", "emias.info", "boosty.to", "donationalerts.com", "memealerts.com",
+        "2ip.ru", "emias.info", "boosty.to", "donationalerts.com", "memealerts.com",
         "mycdn.me", "ozonusercontent.com", "mradx.net", "mvk.com", "userapi.com",
         "vk-apps.com", "vk-cdn.me", "vk-cdn.net", "vk-portal.net", "vk.cc", "vk.com",
         "vk.company", "vk.design", "vk.link", "vk.me", "vk.team", "vkcache.com", "vkgo.app",

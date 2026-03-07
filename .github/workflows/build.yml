@@ -45,7 +45,7 @@ jobs:
     - name: Convert .yaml to .mrs
       run: |
         find rules -type f -name "*.yaml" | while read file; do
-          mihomo convert-ruleset domain text "$file" "${file%.yaml}.mrs"
+          mihomo convert-ruleset domain yaml "$file" "${file%.yaml}.mrs"
         done
 
     - name: Commit and push generated files

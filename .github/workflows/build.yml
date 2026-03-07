@@ -1,4 +1,4 @@
-name: Build RU dommains lists
+name: Build RU domains lists
 
 on:
   workflow_dispatch:

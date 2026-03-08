@@ -530,13 +530,6 @@ rules:
 
   # Блокировка рекламы (опционально)
   - RULE-SET,oisd_big,REJECT # Списки скомпилированные Legiz
-
-  # Пускаем эти домены твича в директ, чтобы избавиться от рекламы (опционально и работает не всегда)
-  - DOMAIN-SUFFIX,gql.twitch.tv,DIRECT
-  - DOMAIN-SUFFIX,usher.ttvnw.net,DIRECT
-  - DOMAIN-SUFFIX,ads.twitch.tv,DIRECT
-  - DOMAIN-SUFFIX,playlist.ttvnw.net,DIRECT
-  - DOMAIN-SUFFIX,static-cdn.jtvnw.net,DIRECT
   
   # Отправляем торренты в DIRECT (опционально)
   - RULE-SET,torrent-clients,DIRECT

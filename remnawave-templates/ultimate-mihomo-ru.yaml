@@ -543,7 +543,7 @@ rules:
   - RULE-SET,torrent-trackers,DIRECT
   - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
 
-  # Делаем REJECT QUIC (для VLESS REALITY XTLS UDP443 VISION)
+  # Делаем REJECT QUIC
   - RULE-SET,quic,REJECT
 
   # Определялки IP пускаем в прокси, чтобы пользователь видел

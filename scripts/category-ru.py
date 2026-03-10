@@ -45,7 +45,7 @@ def main():
 
     ru_urls = [
         "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data/category-ru",
-        "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/refs/heads/master/data/whitelist",
+        "https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data/whitelist",
         "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/outside-raw.lst",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ru.list",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/drweb.list",
@@ -61,6 +61,7 @@ def main():
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-travel-ru.list",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ecommerce-ru.list",
         "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-retail-ru.list",
+        "https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/category-ru-legacy.txt",
     ]
 
     ru_domains = set([

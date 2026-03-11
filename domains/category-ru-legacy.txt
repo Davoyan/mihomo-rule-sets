@@ -21,7 +21,48 @@ domain:showip.net
 
 # ПАО Сбербанк (Рег. № 1481)
 
-keyword:sber.
+# Sberbank / Sber
+
+domain:sberbank.com
+domain:sberlabs.com
+domain:sber.me
+domain:sberdocs.com
+domain:sberbankinvestmentresearch.com
+domain:nasporte.life
+domain:sberanalytics.com
+domain:sberbank-cib.com
+domain:sberpravo.info
+domain:sberbusiness.live
+domain:oidconnect.com
+domain:sber.cn
+domain:sber.pro
+domain:sberbank.co.in
+domain:polly.events
+domain:senat.cloud
+domain:nasporte.pro
+domain:sberpravo.tech
+domain:sberbank-pb.com
+domain:sber-impulse.com
+domain:sberimpulse.com
+domain:therussiaforum.com
+domain:aihome.dev
+domain:sbruss.store
+domain:sber.sbs
+domain:sber.world
+domain:smart-cards.pro
+domain:coloradogrowers.com
+domain:sberpay.vip
+domain:creditdevelopment.pro
+domain:topcards.pro
+domain:svy59w.shop
+domain:sber.cfd
+domain:topdeposit.pro
+domain:sberfinance.net
+domain:sber.ws
+domain:vozvratnalogov.online
+domain:smsemailstats.com
+domain:sbercoin.com
+
 domain:clickstream.ru
 domain:pokupay.ru
 domain:portal-da.ru
@@ -68,7 +109,49 @@ domain:sbercoin.com
 
 # АО "ТБанк" (Рег. № 2673)
 
+# Tinkoff / Tbank
+
 keyword:tinkoff.
+domain:four-seasons.group
+domain:tbankjob.site
+domain:4epenaxa.com
+domain:tinkoff-digital.com
+domain:securetpayment.com
+domain:tinkoff-group.com
+domain:careeny.xyz
+domain:tlnkof.xyz
+domain:tinkoffgroup.com
+domain:drivercard.site
+domain:tinkoffdigital.com
+domain:tynkoff.cc
+domain:bonus-card.ml
+domain:dorenko.tv
+domain:tinkoffip.site
+domain:tinkoff-anketa.site
+domain:aksyuterian.com
+domain:tinkoff-osago.tk
+domain:bankonline.center
+domain:tlnkoff-open.xyz
+domain:3ds-secure-payment.com
+domain:careery.xyz
+domain:tinkoffreg.site
+domain:za-group.net
+domain:eginvestments.net
+domain:t-atm.org
+domain:t-avia.org
+domain:t-gorod.org
+domain:t-tps.org
+domain:t-capy.org
+domain:posl-t.org
+domain:billapp.org
+domain:womba-t.org
+domain:koshelek.app
+domain:tinkoffmobile.com
+domain:jump.finance
+domain:t.finance
+domain:cloudpayments.world
+domain:investlaboratory.com
+
 domain:custody.ru
 domain:private-banking.ru
 domain:rosbank-auto.ru
@@ -268,7 +351,20 @@ domain:vlbb.ru
 domain:kb-tub.ru
 # ПАО "Совкомбанк" (Рег. № 963)
 domain:fintender.ru
-keyword:halva.
+domain:halva.email
+domain:halva.energy
+domain:halva.im
+domain:halva.promo
+domain:halva.tel
+domain:home.bank
+domain:hva.im
+domain:doktor.kr
+domain:scb.im
+domain:sovcombank.business
+domain:sovcombank.credit
+domain:sovcombank.info
+domain:sovcombank.com
+
 domain:halvacard.ru
 domain:halvaclub.ru
 domain:home.bank
@@ -490,16 +586,37 @@ domain:thbank.ru
 domain:kk.bank
 domain:kk.ru
 domain:kkbank.ru
-keyword:kuban-credit.
+# КБ "Кубань Кредит" ООО (Рег. № 2518)
+
+domain:kk.bank
+domain:kuban-credit.biz
+domain:kuban-credit.com
+domain:kuban-credit.net
+domain:kuban-kredit.biz
+domain:kuban-kredit.com
+domain:kuban-kredit.net
 domain:kuban.credit
-keyword:kubancredit.
+domain:kubancredit.biz
+domain:kubancredit.com
+domain:kubancredit.net
+domain:kubankredit.biz
+domain:kubankredit.com
+domain:kubankredit.net
+domain:xn----7sbcoetidz6azac4j.com
+domain:xn----7sbcoetidz6azac4j.net
+domain:xn--80abkdqhcx2axc5i.com
+domain:kuban.credit
+domain:kubancredit.biz
+domain:kubancredit.com
+domain:kubancredit.net
 domain:kubcred.ru
 domain:kubkred.ru
 domain:kubankredit.ru
-keyword:xn----7sbcoetidz6azac4j.
+domain:xn----7sbcoetidz6azac4j.com
+domain:xn----7sbcoetidz6azac4j.net
 domain:xn--80aabbofwlcf0ag7a5ag1m.xn--p1ai
 domain:xn--80abkdqhcx2axc.xn--p1ai
-keyword:xn--80abkdqhcx2axc5i.
+domain:xn--80abkdqhcx2axc5i.com
 # ЭКСИ-Банк (АО) (Рег. № 2530)
 domain:exibank.ru
 # АО КБ "Пойдём!" (Рег. № 2534)

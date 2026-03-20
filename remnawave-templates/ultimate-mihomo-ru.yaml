@@ -560,10 +560,19 @@ rules:
   # ➤ Telegram
   - RULE-SET,telegram-ips,➤ Telegram
   - RULE-SET,telegram-domains,➤ Telegram
+  - DOMAIN-SUFFIX,exteragram.app,➤ Telegram
+  - DOMAIN-SUFFIX,api.swiftgram.app,➤ Telegram
+  - DOMAIN-KEYWORD,nicegram,➤ Telegram
+  - IP-CIDR,5.28.192.0/18,➤ Telegram,no-resolve        # Vodaphone, точно есть
+  - IP-CIDR,91.108.0.0/16,➤ Telegram,no-resolve        # Более широкий оригинал
+  - IP-CIDR,109.239.140.0/24,➤ Telegram,no-resolve     # Telegram Network (RU)
+  - IP-CIDR,2001:b28:f23c::/47,➤ Telegram,no-resolve   # Более широкий оригинал
+  - IP-CIDR,2a0a:f280::/29,➤ Telegram,no-resolve       # Более широкий оригинал
   - PROCESS-NAME-REGEX,(?i).*ayugram.*,➤ Telegram
   - PROCESS-NAME-REGEX,(?i).*telegram.*,➤ Telegram
   - PROCESS-NAME-REGEX,(?i).*nekogram.*,➤ Telegram
   - PROCESS-NAME-REGEX,(?i).*nagram.*,➤ Telegram
+  - PROCESS-NAME-REGEX,(?i).*nekox.*,➤ Telegram
 
   # 💬 Discord
   - AND,((RULE-SET,cloudflare-ips),(NETWORK,udp),(DST-PORT,19200-19500)),💬 Discord

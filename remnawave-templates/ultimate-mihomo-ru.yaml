@@ -461,11 +461,11 @@ rule-providers:
   additional-telegram-domains:
     type: inline
     payload:
-      - DOMAIN-SUFFIX,exteragram.app,➤ Telegram
-      - DOMAIN-SUFFIX,swiftgram.app,➤ Telegram
-      - DOMAIN-KEYWORD,nicegram,➤ Telegram
-      - DOMAIN-SUFFIX,stel.com,➤ Telegram
-      - DOMAIN-SUFFIX,legra.ph,➤ Telegram
+      - DOMAIN-SUFFIX,exteragram.app
+      - DOMAIN-SUFFIX,swiftgram.app
+      - DOMAIN-KEYWORD,nicegram
+      - DOMAIN-SUFFIX,stel.com
+      - DOMAIN-SUFFIX,legra.ph
     behavior: classical
   oisd_big:
     type: http

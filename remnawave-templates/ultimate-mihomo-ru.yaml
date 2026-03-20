@@ -155,7 +155,7 @@ dns:
       - https://8.8.8.8/dns-query#▶️ YouTube
       - https://94.140.14.14/dns-query#▶️ YouTube
     # DNS для доменов Telegram, DNS запросы будут идти через то, что выбрано в "Telegram"
-    rule-set:telegram-domains:
+    rule-set:telegram-domains,additional-telegram-domains:
       - https://8.8.8.8/dns-query#➤ Telegram
       - https://94.140.14.14/dns-query#➤ Telegram
     # DNS для RU сайтов, DNS запросы будут идти через то, что выбрано в "RU сайты", по умолчанию это DIRECT
@@ -458,6 +458,15 @@ rule-providers:
     proxy: 🚫 Недоступные сайты
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
     path: ./rule-sets/telegram-domains.mrs
+  additional-telegram-domains:
+    type: inline
+    payload:
+      - DOMAIN-SUFFIX,exteragram.app,➤ Telegram
+      - DOMAIN-SUFFIX,swiftgram.app,➤ Telegram
+      - DOMAIN-KEYWORD,nicegram,➤ Telegram
+      - DOMAIN-SUFFIX,stel.com,➤ Telegram
+      - DOMAIN-SUFFIX,legra.ph,➤ Telegram
+    behavior: classical
   oisd_big:
     type: http
     behavior: domain
@@ -560,9 +569,7 @@ rules:
   # ➤ Telegram
   - RULE-SET,telegram-ips,➤ Telegram
   - RULE-SET,telegram-domains,➤ Telegram
-  - DOMAIN-SUFFIX,exteragram.app,➤ Telegram
-  - DOMAIN-SUFFIX,api.swiftgram.app,➤ Telegram
-  - DOMAIN-KEYWORD,nicegram,➤ Telegram
+  - RULE-SET,additional-telegram-domains,➤ Telegram
   - IP-CIDR,5.28.192.0/18,➤ Telegram,no-resolve        # Vodaphone, точно есть
   - IP-CIDR,91.108.0.0/16,➤ Telegram,no-resolve        # Более широкий оригинал
   - IP-CIDR,109.239.140.0/24,➤ Telegram,no-resolve     # Telegram Network (RU)

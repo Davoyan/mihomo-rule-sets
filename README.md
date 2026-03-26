@@ -43,9 +43,11 @@
 ---
 ## Шаблон *Ultimate Mihomo Ru* для Remnawave
 
-Исчерпывающее описание вы можете прочитать в [коментариях](https://github.com/Davoyan/mihomo-rule-sets/blob/main/remnawave-templates/ultimate-mihomo-ru.yaml#L1) в шаблоне
+Исчерпывающее описание вы можете прочитать в [коментариях](https://github.com/Davoyan/mihomo-rule-sets/blob/main/remnawave-templates/ultimate-mihomo-ru.yaml#L1) в шаблоне.
 
 Использует списки и правила из этого репозитория.
+
+Если вы не используете шаблон не как учебный пример, а используете его непосредственно, то рекомендуется его переодически обновлять.
 
 <details>
 <summary>📖 Инструкция в картинках</summary>
@@ -62,7 +64,7 @@
 ### 4. Загружаем шаблон
 <img src="https://github.com/user-attachments/assets/4f75c3e7-3bb3-4b8c-a5f5-4921edcd465b" width="700"/>
 
-### 5. Сохраняям, применяя изменения
+### 5. Сохраняем, применяя изменения
 <img src="https://github.com/user-attachments/assets/5218f05c-23b9-4f49-8e83-b0e12defb061" width="450"/>
 </details>
 

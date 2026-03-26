@@ -1,6 +1,34 @@
 Этот репозиторий для моих правил маршрутизации в различных приложениях и конфигах.
 
 ---
+## Шаблон *Ultimate Mihomo Ru* для Remnawave
+
+Исчерпывающее описание вы можете прочитать в [коментариях](https://github.com/Davoyan/mihomo-rule-sets/blob/main/remnawave-templates/ultimate-mihomo-ru.yaml#L1) в шаблоне.
+
+Использует списки и правила из этого репозитория.
+
+Если вы не используете шаблон не как учебный пример, а используете его непосредственно, то рекомендуется его переодически обновлять.
+
+<details>
+<summary>📖 Инструкция в картинках</summary>
+
+### 1. Открываем панель, ищем редактор пользовательского конфига Mihomo
+<img src="https://github.com/user-attachments/assets/4a21f2ae-e8a4-41d5-a0f4-989a7a4bf2d7" width="300"/>
+
+### 2. Редактируем шаблон По умолчанию, что отдаётся пользователям подписки
+<img src="https://github.com/user-attachments/assets/bc1cad1b-af2b-425f-959d-dcfeb9cdca69" width="400"/>
+
+### 3. Открываем меню с готовыми шаблонами конфигураций
+<img src="https://github.com/user-attachments/assets/9def91bf-65d3-4abd-a22e-9359d95a642b" width="500"/>
+
+### 4. Загружаем шаблон
+<img src="https://github.com/user-attachments/assets/4f75c3e7-3bb3-4b8c-a5f5-4921edcd465b" width="700"/>
+
+### 5. Сохраняем, применяя изменения
+<img src="https://github.com/user-attachments/assets/5218f05c-23b9-4f49-8e83-b0e12defb061" width="450"/>
+</details>
+
+---
 ## Список IP адресов для маршрутизации внутри России.
 
 Список ip подсетей, сгенерированный из баз [IPinfo](https://ipinfo.io/data) + [MaxMind](https://github.com/P3TERX/GeoLite.mmdb/).
@@ -39,34 +67,6 @@
 * `category-ru.lst` - TXT файл с доменами
 * `category-ru.mrs` - mrs для Mihomo
 * `category-ru.yaml` - yaml для Clash/Mihomo
-
----
-## Шаблон *Ultimate Mihomo Ru* для Remnawave
-
-Исчерпывающее описание вы можете прочитать в [коментариях](https://github.com/Davoyan/mihomo-rule-sets/blob/main/remnawave-templates/ultimate-mihomo-ru.yaml#L1) в шаблоне.
-
-Использует списки и правила из этого репозитория.
-
-Если вы не используете шаблон не как учебный пример, а используете его непосредственно, то рекомендуется его переодически обновлять.
-
-<details>
-<summary>📖 Инструкция в картинках</summary>
-
-### 1. Открываем панель, ищем редактор пользовательского конфига Mihomo
-<img src="https://github.com/user-attachments/assets/4a21f2ae-e8a4-41d5-a0f4-989a7a4bf2d7" width="300"/>
-
-### 2. Редактируем шаблон По умолчанию, что отдаётся пользователям подписки
-<img src="https://github.com/user-attachments/assets/bc1cad1b-af2b-425f-959d-dcfeb9cdca69" width="400"/>
-
-### 3. Открываем меню с готовыми шаблонами конфигураций
-<img src="https://github.com/user-attachments/assets/9def91bf-65d3-4abd-a22e-9359d95a642b" width="500"/>
-
-### 4. Загружаем шаблон
-<img src="https://github.com/user-attachments/assets/4f75c3e7-3bb3-4b8c-a5f5-4921edcd465b" width="700"/>
-
-### 5. Сохраняем, применяя изменения
-<img src="https://github.com/user-attachments/assets/5218f05c-23b9-4f49-8e83-b0e12defb061" width="450"/>
-</details>
 
 ---
 ## Donation

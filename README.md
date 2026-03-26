@@ -41,7 +41,7 @@
 * `category-ru.yaml` - yaml для Clash/Mihomo
 
 ---
-## Шаблон Ultimate Mihomo Ru для Remnawave
+## Шаблон *Ultimate Mihomo Ru* для Remnawave
 
 Исчерпывающее описание вы можете прочитать в [коментариях](https://github.com/Davoyan/mihomo-rule-sets/blob/main/remnawave-templates/ultimate-mihomo-ru.yaml#L1) в шаблоне
 

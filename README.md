@@ -72,7 +72,8 @@
 
 ---
 ## Donation
-Если вы вдруг захотите меня поддержать.
+Самый простой способ поддержать меня, это нажать на звездочку (⭐) в верхней части страницы.
+Если вы вдруг захотите меня поддержать деньгой:
 
 - **TON: `UQAMcrN7fDEX5BV4Ui9LpJeQj_OfDttUiQKz-UsbiQrpCkgZ`**
 - **BTC: `bc1qxl05dhaxp5s3vpu4njx4mrzqfccqlhgfsp5dyu`**

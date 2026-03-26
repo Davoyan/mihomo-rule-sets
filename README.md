@@ -33,7 +33,7 @@
 * category-ru и российские компании ([full](https://github.com/Davoyan/mihomo-rule-sets/blob/main/scripts/category-ru.py#L46)) из репозитория MetaCubeX
 * itdoginfo список [outside](https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/outside-raw.lst)
 * hydraponique списки [category-ru](https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data/category-ru) и [whitelist](https://raw.githubusercontent.com/hydraponique/roscomvpn-geosite/master/data/whitelist)
-* legacy [домены](https://github.com/Davoyan/mihomo-rule-sets/blob/main/domains/category-ru-legacy.txt) из репозитория hydraponique, перед чисткой доменов, которые резолвятся в RU ip
+* legacy [домены](https://github.com/Davoyan/mihomo-rule-sets/blob/main/domains/category-ru-legacy.txt) из репозитория hydraponique, сохранённый перед оптимизацией (удалением) доменов в оригинальном репозитории, которые резолвятся в RU ip
 
 #### [rules](https://github.com/Davoyan/mihomo-rule-sets/tree/main/rules)
 * `category-ru.lst` - TXT файл с доменами

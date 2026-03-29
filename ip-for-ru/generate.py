@@ -130,7 +130,19 @@ def main() -> None:
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    
+
+    # json snippet blancer
+    payload = [
+        {
+            "ip": all_nets,
+            "outboundTag": "BAL-RU",
+        }
+    ]
+    (listsdir / "ips-for-ru-snippet-balancer.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+  
     # json singbox
     payload = {
       "version": 2,

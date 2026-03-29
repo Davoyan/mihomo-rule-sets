@@ -135,7 +135,7 @@ def main() -> None:
     payload = [
         {
             "ip": all_nets,
-            "outboundTag": "BAL-RU",
+            "balancerTag": "BAL-RU",
         }
     ]
     (listsdir / "ips-for-ru-snippet-balancer.json").write_text(

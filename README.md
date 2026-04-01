@@ -13,8 +13,9 @@
 - Android / Widndows / Linux / macOS - [FlClashX](https://github.com/pluralplay/FlClashX) 
 - ios - [Rabbit Hole](https://apps.apple.com/app/rabbithole-vpn-client/id6683309629) 
 
+## 📖 Инструкция в картинках
 <details>
-<summary>📖 Инструкция в картинках</summary>
+<summary>Спойлер</summary>
 
 ### 1. Открываем панель, ищем редактор пользовательского конфига Mihomo
 <img src="https://github.com/user-attachments/assets/4a21f2ae-e8a4-41d5-a0f4-989a7a4bf2d7" width="300"/>

@@ -33,6 +33,7 @@ payload:
     - +.alfa-pc.com
     - +.alfa-usa.com
     - +.alfabank.com
+    - +.alfabank.st
     - +.alfafinance.biz
     - +.alfafuture.com
     - +.alfafx.com
@@ -58,6 +59,7 @@ payload:
     - +.bk.mufg.jp
     - +.bonus-card.ml
     - +.boosty.to
+    - +.bps-sberbank.by
     - +.bronevik.com
     - +.careeny.xyz
     - +.careery.xyz
@@ -65,6 +67,7 @@ payload:
     - +.checkip.amazonaws.com
     - +.chizhik.club
     - +.cloudpayments.world
+    - +.cloudru.cn
     - +.clstorage.net
     - +.coloradogrowers.com
     - +.corona-perevod.com
@@ -99,7 +102,10 @@ payload:
     - +.evrasia.rest
     - +.fix-price.com
     - +.four-seasons.group
+    - +.gazprombank.com
+    - +.gazprombank.investments
     - +.gazprombank.tech
+    - +.giga.chat
     - +.granat.az
     - +.halva.email
     - +.halva.energy
@@ -184,6 +190,7 @@ payload:
     - +.medsi.pro
     - +.megamarket.tech
     - +.memealerts.com
+    - +.meteum.ai
     - +.miya-news.online
     - +.mizuhogroup.com
     - +.moex.com
@@ -237,6 +244,7 @@ payload:
     - +.ru.net
     - +.rusagrobank.com
     - +.russiacalling.com
+    - +.sber-bank.by
     - +.sber-impulse.com
     - +.sber.cfd
     - +.sber.cn
@@ -246,12 +254,14 @@ payload:
     - +.sber.world
     - +.sber.ws
     - +.sberanalytics.com
+    - +.sberauto.com
     - +.sberbank-cib.com
     - +.sberbank-pb.com
     - +.sberbank.co.in
     - +.sberbank.com
     - +.sberbankinvestmentresearch.com
     - +.sberbusiness.live
+    - +.sbercloud.tech
     - +.sbercoin.com
     - +.sberdocs.com
     - +.sberfinance.net
@@ -265,6 +275,7 @@ payload:
     - +.securetpayment.com
     - +.senat.cloud
     - +.set.ki
+    - +.shedevrum.ai
     - +.showip.net
     - +.sistema-capital.com
     - +.slavia-bank.com
@@ -273,6 +284,7 @@ payload:
     - +.smartmed.pro
     - +.smotreshka.tv
     - +.smsemailstats.com
+    - +.sourcecraft.dev
     - +.sovcombank.business
     - +.sovcombank.com
     - +.sovcombank.credit
@@ -321,6 +333,7 @@ payload:
     - +.tynkoff.cc
     - +.ubs.com
     - +.uni.rest
+    - +.unidraw.io
     - +.unirest.tech
     - +.unistream.com
     - +.userapi.com
@@ -385,10 +398,12 @@ payload:
     - +.xn--d1acj3b
     - +.xn--p1acf
     - +.xn--p1ai
+    - +.ya.cc
     - +.yads.tech
     - +.yandex
     - +.yandex-bank.net
     - +.yandex.aero
+    - +.yandex.asia
     - +.yandex.az
     - +.yandex.by
     - +.yandex.cloud
@@ -409,6 +424,7 @@ payload:
     - +.yandex.lt
     - +.yandex.lv
     - +.yandex.md
+    - +.yandex.mobi
     - +.yandex.net
     - +.yandex.org
     - +.yandex.pl
@@ -431,3 +447,5 @@ payload:
     - +.youla.io
     - +.za-group.net
     - +.zentotem.net
+    - +.zvuk-b2b.com
+    - +.zvuk.com

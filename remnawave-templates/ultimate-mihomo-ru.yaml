@@ -121,10 +121,12 @@ dns:
     # DNS для доменов DNS серверов
     - https://94.140.14.14/dns-query#DIRECT #Adguard DNS
     - https://8.8.8.8/dns-query#DIRECT
+    - https://77.88.8.8/dns-query#DIRECT
   proxy-server-nameserver:
     # DNS для доменов прокси из раздела proxies
     - https://94.140.14.14/dns-query#DIRECT
     - https://8.8.8.8/dns-query#DIRECT
+    - https://77.88.8.8/dns-query#DIRECT
   direct-nameserver:
     # DNS для сайтов идущих через DIRECT
     - https://77.88.8.8/dns-query#DIRECT # Yandex DNS

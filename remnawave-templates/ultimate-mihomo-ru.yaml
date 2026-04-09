@@ -137,6 +137,9 @@ dns:
     - https://8.8.8.8/dns-query#🌍 Остальные сайты
     - https://94.140.14.14/dns-query#🌍 Остальные сайты
   nameserver-policy:
+    # Приватные домены через системный ДНС
+    rule-set:geosite-private:
+      - system
     # Блокировка рекламы (опционально)
     rule-set:oisd_big:
       - rcode://refused # Код отклонённого DNS

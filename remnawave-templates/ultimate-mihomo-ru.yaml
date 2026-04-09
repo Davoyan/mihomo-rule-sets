@@ -132,6 +132,7 @@ dns:
     - https://77.88.8.8/dns-query#DIRECT # Yandex DNS
     - https://8.8.8.8/dns-query#DIRECT # Google DNS
     - 77.88.8.8#DIRECT
+    - system
   nameserver:
     # Сервер по умолчанию, DNS запросы будут идти через то, что выбрано в "Остальные сайты"
     - https://8.8.8.8/dns-query#🌍 Остальные сайты

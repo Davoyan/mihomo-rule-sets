@@ -61,6 +61,7 @@ payload:
     - +.boosty.to
     - +.bps-sberbank.by
     - +.bronevik.com
+    - +.cabconnect.org
     - +.careeny.xyz
     - +.careery.xyz
     - +.cdnvideohub.com
@@ -81,6 +82,7 @@ payload:
     - +.doktor.kr
     - +.donationalerts.com
     - +.dorenko.tv
+    - +.driveawaytaxi.org
     - +.drivercard.site
     - +.drweb-av.de
     - +.drweb-av.es
@@ -106,12 +108,15 @@ payload:
     - +.gazprombank.investments
     - +.gazprombank.tech
     - +.giga.chat
+    - +.gogettaxi.org
+    - +.goup.ai
     - +.granat.az
     - +.halva.email
     - +.halva.energy
     - +.halva.im
     - +.halva.promo
     - +.halva.tel
+    - +.hayya.ae
     - +.home.bank
     - +.host1861554.hostland.pro
     - +.hva.im
@@ -120,7 +125,17 @@ payload:
     - +.investalfabank.com
     - +.investlaboratory.com
     - +.ipify.org
+    - +.jivo.chat
+    - +.jivochat.co.in
+    - +.jivochat.co.za
     - +.jivochat.com
+    - +.jivochat.com.br
+    - +.jivochat.com.co
+    - +.jivochat.com.pe
+    - +.jivochat.com.tr
+    - +.jivochat.de
+    - +.jivochat.es
+    - +.jivochat.ng
     - +.jivosite.com
     - +.jump.finance
     - +.kamkombank.pro
@@ -199,6 +214,7 @@ payload:
     - +.mosmetro.tech
     - +.mradx.net
     - +.mvk.com
+    - +.my-manager-account.com
     - +.mycdn.me
     - +.nasporte.life
     - +.nasporte.pro
@@ -293,6 +309,7 @@ payload:
     - +.spbbank.com
     - +.static-storage.net
     - +.su
+    - +.support-uber.com
     - +.svoy.academy
     - +.svy59w.shop
     - +.t-atm.org
@@ -304,6 +321,9 @@ payload:
     - +.t1.cloud
     - +.tamtam.chat
     - +.tatar
+    - +.taxiaid.org
+    - +.taxiguru.org
+    - +.taxitax.org
     - +.taxsee.com
     - +.tbank-online.com
     - +.tbankjob.site
@@ -439,9 +459,24 @@ payload:
     - +.yandexadexchange.net
     - +.yandexcloud.net
     - +.yandexcom.net
+    - +.yandexgo.com
     - +.yandexmetrica.com
     - +.yandexwebcache.net
     - +.yandexwebcache.org
+    - +.yango-ads.com
+    - +.yango-b2b.com
+    - +.yango-team.com
+    - +.yango-tech.com
+    - +.yango.africa
+    - +.yango.ao
+    - +.yango.bh
+    - +.yango.co.il
+    - +.yango.com
+    - +.yango.fi
+    - +.yango.qa
+    - +.yango.taxi
+    - +.yango.tech
+    - +.yangofellowship.com
     - +.yastat.net
     - +.yastatic.net
     - +.yclients.com

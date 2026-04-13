@@ -24,6 +24,7 @@ payload:
     - +.4meeting.me
     - +.5post.market
     - +.absolutbank.com
+    - +.accesspoint.uz
     - +.aihome.dev
     - +.aksyuterian.com
     - +.alefbank.com
@@ -33,6 +34,7 @@ payload:
     - +.alfa-pc.com
     - +.alfa-usa.com
     - +.alfabank.com
+    - +.alfabank.oavdo.amc
     - +.alfabank.st
     - +.alfafinance.biz
     - +.alfafuture.com
@@ -59,7 +61,6 @@ payload:
     - +.billapp.org
     - +.bitrix.info
     - +.bk.mufg.jp
-    - +.bonbon.am
     - +.bonus-card.ml
     - +.boosty.to
     - +.botmechanic.io
@@ -68,7 +69,6 @@ payload:
     - +.cabconnect.org
     - +.careeny.xyz
     - +.careery.xyz
-    - +.caronino.com
     - +.carrot-mail.io
     - +.carrotquest-mail.io
     - +.carrotquest.app
@@ -134,7 +134,6 @@ payload:
     - +.evrasia.rest
     - +.ewisdom.us.kg
     - +.fix-price.com
-    - +.foralice.online
     - +.four-seasons.group
     - +.gazprombank.com
     - +.gazprombank.investments
@@ -142,7 +141,7 @@ payload:
     - +.genetic-technologies.am
     - +.genotek.am
     - +.genotek.health
-    - +.gerronfox.com
+    - +.getsynapse.io
     - +.giga.chat
     - +.gogettaxi.org
     - +.goup.ai
@@ -154,6 +153,8 @@ payload:
     - +.halva.promo
     - +.halva.tel
     - +.hayya.ae
+    - +.hh.by
+    - +.hh.kz
     - +.home.bank
     - +.host1861554.hostland.pro
     - +.hva.im
@@ -162,9 +163,6 @@ payload:
     - +.investalfabank.com
     - +.investlaboratory.com
     - +.ipify.org
-    - +.jieshang.online
-    - +.jieshang.shop
-    - +.jieshang.store
     - +.jivo.chat
     - +.jivochat.co.in
     - +.jivochat.co.za
@@ -239,7 +237,6 @@ payload:
     - +.lead-pro2023.online
     - +.lenta.com
     - +.lenta.tech
-    - +.lizageld.de
     - +.lmru.tech
     - +.locko-bank.info
     - +.mail-carrotquest.io
@@ -249,7 +246,6 @@ payload:
     - +.medsi.pro
     - +.megafon.com
     - +.megamarket.tech
-    - +.megapolis.llc
     - +.memealerts.com
     - +.meteum.ai
     - +.mindbox.cloud
@@ -276,9 +272,6 @@ payload:
     - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
-    - +.nuwjon.online
-    - +.nuwjon.shop
-    - +.nuwjon.store
     - +.oidconnect.com
     - +.okko.sport
     - +.okko.tv
@@ -305,7 +298,6 @@ payload:
     - +.ozonru.eu
     - +.ozonru.me
     - +.ozonusercontent.com
-    - +.papertole.by
     - +.paywb.com
     - +.perekrestok.com
     - +.perevodkorona.com
@@ -322,6 +314,7 @@ payload:
     - +.pskb.com
     - +.pushgrow.io
     - +.pvubank.com
+    - +.rabota.by
     - +.restream-media.net
     - +.rocketozon.by
     - +.roistat.com
@@ -395,6 +388,8 @@ payload:
     - +.sovcombank.com
     - +.sovcombank.credit
     - +.sovcombank.info
+    - +.spasibo.digital
+    - +.spasibo.market
     - +.spbbank.com
     - +.srv-hub.org
     - +.static-storage.net
@@ -426,7 +421,6 @@ payload:
     - +.telega.info
     - +.telega.me
     - +.therussiaforum.com
-    - +.tigrenok.toys
     - +.tilda.cc
     - +.timeweb.cloud
     - +.timeweb.com

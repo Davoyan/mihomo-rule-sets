@@ -102,7 +102,12 @@ tun:
     - fc00::/7
     - fe80::/10
     - ff00::/8
-
+  exclude-package:
+    [
+      "az.vtb.android",
+      "business.gid.hero",
+    ]
+    
 dns:
   enable: true
   prefer-h3: false

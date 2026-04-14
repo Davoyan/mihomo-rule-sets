@@ -1,0 +1,40 @@
+name: Update ru apps in remnawave template
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  update-ru-apps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Run updater
+        run: |
+          python scripts/update-ru-apps.py --no-backup
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "mihomo-rule-sets bot"
+          git config user.email "noreply@github.com"
+
+          git add remnawave-templates/ultimate-mihomo-ru.yaml
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "Update ru apps in remnawave template"
+          git push

@@ -518,6 +518,9 @@ rules:
   - RULE-SET,torrent-clients,DIRECT
   - RULE-SET,torrent-trackers,DIRECT
   - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
+  
+  # Списки РУ приложений от Legiz
+  - RULE-SET,ru-apps,⚪🔵🔴 RU сайты 
 
   # Делаем REJECT QUIC
   - RULE-SET,quic,REJECT
@@ -571,7 +574,6 @@ rules:
 
   # ⚪🔵🔴 RU сайты
   - RULE-SET,ru-inline,⚪🔵🔴 RU сайты # Списки набитые вручную (смотрите выше в rule-providers)
-  - RULE-SET,ru-apps,⚪🔵🔴 RU сайты # Списки РУ приложений от Legiz
 
 
   # geosite-ru включает в себя и собирается автоматически тут (https://github.com/Davoyan/mihomo-rule-sets) - 

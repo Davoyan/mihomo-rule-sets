@@ -25,6 +25,7 @@ payload:
     - +.5post.market
     - +.absolutbank.com
     - +.accesspoint.uz
+    - +.adsadvisor.io
     - +.aihome.dev
     - +.aksyuterian.com
     - +.alefbank.com
@@ -42,12 +43,17 @@ payload:
     - +.alfaprivate.com
     - +.alformacap.com
     - +.alformacapital.com
+    - +.algoritmika.org
     - +.altbank.com
     - +.altynbank.com
     - +.animego.me
+    - +.anytimeru.com
+    - +.aodahl.com
     - +.apptrackpets.com
+    - +.armgs.team
     - +.astrasend.net
     - +.atomyze.tech
+    - +.attachmy.com
     - +.autobahn.db.com
     - +.aviasales.com
     - +.avito.st
@@ -56,10 +62,12 @@ payload:
     - +.bank131.com
     - +.banka-ui.dev
     - +.bankonline.center
+    - +.bargipsy.com
     - +.beeline.tv
     - +.beta-bank.com
     - +.billapp.org
     - +.bitrix.info
+    - +.bizmrg.com
     - +.bk.mufg.jp
     - +.bonus-card.ml
     - +.boosty.to
@@ -74,10 +82,12 @@ payload:
     - +.carrotquest.app
     - +.carrotquest.io
     - +.carrottrack.app
+    - +.cdn-vk.net
     - +.cdnvideohub.com
     - +.checkip.amazonaws.com
     - +.chipcore.com
     - +.chizhik.club
+    - +.ciciq.net
     - +.cloudpayments.world
     - +.cloudru.cn
     - +.clstorage.net
@@ -94,12 +104,17 @@ payload:
     - +.corona-perevod.com
     - +.coronaperevod.com
     - +.creditdevelopment.pro
+    - +.cups.online
+    - +.dahlmessenger.com
     - +.dashly.app
     - +.dashly.help
     - +.dashly.io
     - +.dashly.me
     - +.dashlytrack.app
+    - +.datacloudmy.com
     - +.dbo-dengi.online
+    - +.dev-my.com
+    - +.dev-my.games
     - +.dodois.com
     - +.dodois.io
     - +.dodopizza.com
@@ -129,7 +144,9 @@ payload:
     - +.eligens.io
     - +.emias.info
     - +.energotransbank.com
+    - +.epicevents.gg
     - +.er-fin.com
+    - +.esforce.com
     - +.etna.ai
     - +.evrasia.rest
     - +.ewisdom.us.kg
@@ -144,6 +161,7 @@ payload:
     - +.getsynapse.io
     - +.giga.chat
     - +.gogettaxi.org
+    - +.goicq.org
     - +.goup.ai
     - +.granat.az
     - +.haicomdc.com
@@ -158,11 +176,55 @@ payload:
     - +.home.bank
     - +.host1861554.hostland.pro
     - +.hva.im
+    - +.icq-download.com
+    - +.icq-mobile.com
+    - +.icq-online.com
+    - +.icq-phone.com
+    - +.icq-phone.org
+    - +.icq.asia
+    - +.icq.at
+    - +.icq.biz
+    - +.icq.com
+    - +.icq.de
+    - +.icq.eu
+    - +.icq.fr
+    - +.icq.im
+    - +.icq.lt
+    - +.icq.mobi
+    - +.icq.org
+    - +.icq.sg
+    - +.icq2mobile.com
+    - +.icq5.com
+    - +.icqanywhere.com
+    - +.icqbrasil.com
+    - +.icqbrazil.com
+    - +.icqchat.com
+    - +.icqflirting.com
+    - +.icqgame.com
+    - +.icqgames.com
+    - +.icqkids.com
+    - +.icqmail.com
+    - +.icqmail.net
+    - +.icqonline.com
+    - +.icqpassword.com
+    - +.icqpeople.com
+    - +.icqservers.com
+    - +.icqservice.com
+    - +.icqsupportteam.com
+    - +.icqsystem.com
+    - +.icqsystems.com
+    - +.icqtoday.com
+    - +.icqtutor.com
+    - +.icqvideo.com
     - +.ideco.dev
     - +.ifconfig.me
     - +.investalfabank.com
     - +.investlaboratory.com
+    - +.ip.sb
+    - +.ipapi.is
     - +.ipify.org
+    - +.iplocate.io
+    - +.it-territory.com
     - +.jivo.chat
     - +.jivochat.co.in
     - +.jivochat.co.za
@@ -213,8 +275,11 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
+    - +.kinescope.io
+    - +.kinescopecdn.net
     - +.kinorium.com
     - +.kk.bank
+    - +.knightspeak.com
     - +.korona-perevod.com
     - +.korona.com
     - +.korona.net
@@ -239,11 +304,14 @@ payload:
     - +.lenta.tech
     - +.lmru.tech
     - +.locko-bank.info
+    - +.lovina.app
     - +.mail-carrotquest.io
+    - +.mailicq.org
     - +.mangalib.me
     - +.maritimebank.com
     - +.medsi.com
     - +.medsi.pro
+    - +.medtrum.eu
     - +.megafon.com
     - +.megamarket.tech
     - +.memealerts.com
@@ -252,16 +320,27 @@ payload:
     - +.mindbox.group
     - +.mindbox.site
     - +.mindbox.so
+    - +.mirabilis.com
+    - +.mirandaicq.com
     - +.miya-news.online
     - +.mizuhogroup.com
+    - +.mobile-icq.com
+    - +.mobileicq.com
     - +.moex.com
     - +.moscow
     - +.mosmetro.tech
+    - +.movika.com
     - +.mp.world
+    - +.mpgw-my.com
     - +.mradx.net
     - +.mvk.com
     - +.my-manager-account.com
+    - +.my.com
+    - +.my.games
+    - +.myadx.net
     - +.mycdn.me
+    - +.mytopf.com
+    - +.mytrk.link
     - +.nasporte.life
     - +.nasporte.pro
     - +.nationalclearingcenter.com
@@ -273,8 +352,10 @@ payload:
     - +.ngenix.net
     - +.noda.finance
     - +.oidconnect.com
+    - +.ok.me
     - +.okko.sport
     - +.okko.tv
+    - +.okl.lt
     - +.okolo.app
     - +.ozon.by
     - +.ozon.com
@@ -301,6 +382,7 @@ payload:
     - +.paywb.com
     - +.perekrestok.com
     - +.perevodkorona.com
+    - +.pixonic.com
     - +.polly.events
     - +.popmechanic.io
     - +.posl-t.org
@@ -308,6 +390,7 @@ payload:
     - +.priovtb.com
     - +.probank.pro
     - +.procombank.com
+    - +.prod-my.games
     - +.prodcontest.com
     - +.prostobank.online
     - +.psk
@@ -315,6 +398,7 @@ payload:
     - +.pushgrow.io
     - +.pvubank.com
     - +.rabota.by
+    - +.redheadsound.studio
     - +.restream-media.net
     - +.rocketozon.by
     - +.roistat.com
@@ -322,13 +406,17 @@ payload:
     - +.roscap.com
     - +.rostaxi.org
     - +.rshb.pro
+    - +.rsscenter.cloud
     - +.ru
     - +.ru.abchina.com
     - +.ru.ccb.com
     - +.ru.com
     - +.ru.net
+    - +.ruhub.tv
     - +.rusagrobank.com
     - +.russiacalling.com
+    - +.rustore.team
+    - +.rustore.tv
     - +.rwbautomation.tech
     - +.safeliner.tech
     - +.sage-observability.tech
@@ -376,9 +464,12 @@ payload:
     - +.shedevrum.ai
     - +.showip.net
     - +.sistema-capital.com
+    - +.skbx.pro
+    - +.skillbox.pro
     - +.slavia-bank.com
     - +.slaviabank.com
     - +.slc.tl
+    - +.smailru.net
     - +.smart-cards.pro
     - +.smartmed.pro
     - +.smotreshka.tv
@@ -393,6 +484,7 @@ payload:
     - +.spbbank.com
     - +.srv-hub.org
     - +.static-storage.net
+    - +.staticmy.com
     - +.su
     - +.support-uber.com
     - +.svoy.academy
@@ -409,6 +501,7 @@ payload:
     - +.t.finance
     - +.t1.cloud
     - +.tamtam.chat
+    - +.tarantool.io
     - +.tatar
     - +.taxiaid.org
     - +.taxiguru.org
@@ -445,12 +538,15 @@ payload:
     - +.turbopages.org
     - +.tynkoff.cc
     - +.ubs.com
+    - +.umschool.net
     - +.uni.rest
     - +.unidraw.io
     - +.unirest.tech
     - +.unistream.com
     - +.userapi.com
     - +.vakobank.com
+    - +.viqeo.tv
+    - +.viqeotv.com
     - +.vk-apps.com
     - +.vk-cdn.me
     - +.vk-cdn.net
@@ -463,16 +559,26 @@ payload:
     - +.vk.me
     - +.vk.team
     - +.vkcache.com
+    - +.vkcdnservice.com
+    - +.vkclips.app
+    - +.vkcs.cloud
     - +.vkgo.app
     - +.vklive.app
     - +.vkmessenger.app
     - +.vkmessenger.com
+    - +.vkontakte.com
+    - +.vkpay.app
+    - +.vkpay.com
+    - +.vkpay.io
+    - +.vkplay.live
     - +.vkuser.net
     - +.vkuseraudio.com
     - +.vkuseraudio.net
+    - +.vkuserlive.com
     - +.vkuserlive.net
     - +.vkuservideo.com
     - +.vkuservideo.net
+    - +.vmailru.net
     - +.vozvratnalogov.online
     - +.vscale.blog
     - +.vscale.io
@@ -523,10 +629,18 @@ payload:
     - +.x5.team
     - +.x5.tech
     - +.x5static.net
+    - +.xn-----6kc7adj0c9esa.com
+    - +.xn----7sbaba0dc6cdn7cxcj.com
+    - +.xn----7sbabae2a0bnvtsfr4loc.com
+    - +.xn----7sbbab6bregnh7b8if5b.com
+    - +.xn----7sbbamm1bv2bh7i.com
     - +.xn----7sbcoetidz6azac4j.com
     - +.xn----7sbcoetidz6azac4j.net
+    - +.xn----8sbaroledu6bi7j.com
+    - +.xn----8sbeoy5bze.com
     - +.xn--80abkdqhcx2axc5i.com
     - +.xn--80adxhks
+    - +.xn--80aqcf7a6do.com
     - +.xn--80asehdb
     - +.xn--80aswg
     - +.xn--90ab.com

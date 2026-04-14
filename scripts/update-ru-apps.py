@@ -92,7 +92,11 @@ def find_exclude_package_block(lines: list[str], tun_start: int, tun_end: int) -
     start = None
 
     for i in range(tun_start + 1, tun_end):
-        if re.match(r"^\s{2}exclude-package:\s*(#.*)?$", lines[i]):
+        line = lines[i]
+        stripped = line.lstrip(" ")
+        indent = len(line) - len(stripped)
+
+        if indent == 2 and stripped.startswith("exclude-package:"):
             start = i
             break
 

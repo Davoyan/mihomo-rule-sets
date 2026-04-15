@@ -134,7 +134,9 @@ tun:
     - fc00::/7
     - fe80::/10
     - ff00::/8
-
+  # Иключаем российские приложения из TUN (список - https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/ru-app-list.yaml)
+  exclude-package: ["az.vtb.android", "business.gid.hero"]
+  
 dns:
   enable: true
   prefer-h3: false

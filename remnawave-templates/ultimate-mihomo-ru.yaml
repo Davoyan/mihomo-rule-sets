@@ -19,33 +19,6 @@
 # Также спасибо за пояснения и идеи для конфигов. Отдельное спасибо сообществу Remnawave и её разработчику.
 #-------------------------------------------------------------------------------------------------------------------
 
-# Ключи yaml, для упрощения и исключений дублирований
-
-pr_http: &pr_http
-  type: http
-  proxy: 🚫 Недоступные сайты
-  interval: 86400 # Интервал автообновления (86400 - 24ч)
-
-rp_classical_yaml: &rp_classical_yaml
-  <<: *pr_http
-  behavior: classical
-  format: yaml
-
-rp_classical_text: &rp_classical_text
-  <<: *pr_http
-  behavior: classical
-  format: text
-
-rp_domain_mrs: &rp_domain_mrs
-  <<: *pr_http
-  behavior: domain
-  format: mrs
-
-rp_ipcidr_mrs: &rp_ipcidr_mrs
-  <<: *pr_http
-  behavior: ipcidr
-  format: mrs
-
 remnawave:
   includeHiddenHosts: false
 
@@ -224,12 +197,12 @@ dns:
     rule-set:telegram-domains,additional-telegram-domains:
       - https://8.8.8.8/dns-query#➤ Telegram
       - https://94.140.14.14/dns-query#➤ Telegram
-    # DNS для RU сайтов, DNS запросы будут через DNS указанные в direct-nameserver, если конечные ресурсы попадают в DIRECT. 
+    # DNS для RU сайтов, DNS запросы будут через DNS указанные в direct-nameserver, если конечные ресурсы попадают в DIRECT.
     # Если вы добавите в селектор "⚪🔵🔴 RU сайты" какой-то прокси, то DNS запросы будут идти через указанные тут DNS сервера через этот прокси.
     rule-set:ru-inline,geosite-ru:
       - https://77.88.8.8/dns-query#⚪🔵🔴 RU сайты
       - https://8.8.8.8/dns-query#⚪🔵🔴 RU сайты
-      
+
 proxies:
   - name: "🇷🇺 Без VPN"
     type: direct
@@ -299,98 +272,164 @@ proxy-groups:
 
 rule-providers:
   geosite-ru:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/rules/category-ru.mrs
     path: ./rule-sets/geosite-ru.mrs
   ai:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
     path: ./rule-sets/ai.mrs
   category-porn:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.mrs
     path: ./rule-sets/category-porn.mrs
   geoip-for-ru:
-    <<: *rp_ipcidr_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: ipcidr
+    format: mrs
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/ip-for-ru/lists/ips-for-ru.mrs
     path: ./rule-sets/geoip-for-ru.mrs
   geosite-private:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
     path: ./rule-sets/geosite-private.mrs
   discord_domains:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs
     path: ./rule-sets/discord_domains.mrs
   speedtest-net:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
     path: ./rule-sets/speedtest-net.mrs
   remote-control:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-remote-control.mrs
     path: ./rule-sets/remote-control.mrs
   discord_voiceips:
-    <<: *rp_ipcidr_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: ipcidr
+    format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/discord-voice-ip-list.mrs
     path: ./rule-sets/discord_voiceips.mrs
   refilter_domains:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/re-filter/domain-rule.mrs
     path: ./rule-sets/refilter.mrs
   youtube:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
     path: ./rule-sets/youtube.mrs
   google-deepmind:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-deepmind.mrs
     path: ./rule-sets/google-deepmind.mrs
   telegram-ips:
-    <<: *rp_ipcidr_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: ipcidr
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
     path: ./rule-sets/telegram-ips.mrs
   telegram-domains:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
     path: ./rule-sets/telegram-domains.mrs
   additional-telegram-ips:
-    <<: *rp_classical_yaml
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: classical
+    format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-ips.yaml
     path: ./rule-sets/additional-telegram-ips.yaml
   additional-telegram-domains:
-    <<: *rp_classical_yaml
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: classical
+    format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-domains.yaml
     path: ./rule-sets/additional-telegram-domains.yaml
   oisd_big:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/oisd/big.mrs
     path: ./rule-sets/oisd_big.mrs
   torrent-trackers:
-    <<: *rp_domain_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: domain
+    format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-trackers.mrs
     path: ./rule-sets/torrent-trackers.mrs
   torrent-clients:
-    <<: *rp_classical_yaml
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: classical
+    format: yaml
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-clients.yaml
     path: ./rule-sets/torrent-clients.yaml
   ru-apps:
-    <<: *rp_classical_yaml
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: classical
+    format: yaml
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/ru-app-list.yaml
     path: ./rule-sets/ru-apps.yaml
   ru-inside:
-    <<: *rp_classical_text
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: classical
+    format: text
     url: https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-clashx.lst
     path: ./rule-sets/ru-inside.lst
   cloudflare-ips:
-    <<: *rp_ipcidr_mrs
+    type: http
+    proxy: 🚫 Недоступные сайты
+    behavior: ipcidr
+    format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs
     path: ./rule-sets/cloudflare-ips.mrs
   inline-blocked-ips:
     type: inline
     payload:
       - IP-CIDR,172.232.25.131/32 #IP для чата Warframe (Пример)
-    behavior: classical 
+    behavior: classical
   geoip-private:
     type: inline
     payload:
@@ -514,14 +553,14 @@ rules:
 
   # Блокировка рекламы (опционально)
   - RULE-SET,oisd_big,REJECT # Списки скомпилированные Legiz
-  
+
   # Отправляем торренты в DIRECT (опционально)
   - RULE-SET,torrent-clients,DIRECT
   - RULE-SET,torrent-trackers,DIRECT
   - PROCESS-NAME-REGEX,(?i).*torrent.*,DIRECT
-  
+
   # Списки РУ приложений от Legiz
-  - RULE-SET,ru-apps,⚪🔵🔴 RU сайты 
+  - RULE-SET,ru-apps,⚪🔵🔴 RU сайты
 
   # Делаем REJECT QUIC
   - RULE-SET,quic,REJECT
@@ -562,7 +601,6 @@ rules:
   - PROCESS-NAME-REGEX,(?i).*discord.*,💬 Discord
   - PROCESS-NAME-REGEX,(?i).*vesktop.*,💬 Discord
 
-
   # 🚫 Недоступные сайты
   - RULE-SET,ru-inside,🚫 Недоступные сайты # ITDog списки доменов недоступные из РФ
   - RULE-SET,refilter_domains,🚫 Недоступные сайты # Re:Filter списки доменов недоступные из РФ
@@ -576,16 +614,13 @@ rules:
   # ⚪🔵🔴 RU сайты
   - RULE-SET,ru-inline,⚪🔵🔴 RU сайты # Списки набитые вручную (смотрите выше в rule-providers)
 
-
-  # geosite-ru включает в себя и собирается автоматически тут (https://github.com/Davoyan/mihomo-rule-sets) - 
+  # geosite-ru включает в себя и собирается автоматически тут (https://github.com/Davoyan/mihomo-rule-sets) -
   # Подробнее о том, из чего формируются списки, читайте в readme https://github.com/Davoyan/mihomo-rule-sets
-  - RULE-SET,geosite-ru,⚪🔵🔴 RU сайты 
-
+  - RULE-SET,geosite-ru,⚪🔵🔴 RU сайты
 
   # geo-ip-for-ru (https://github.com/Davoyan/mihomo-rule-sets/tree/main/ip-for-ru/lists)
   # Подробнее о том, из чего формируются списки, читайте в readme https://github.com/Davoyan/mihomo-rule-sets
   - RULE-SET,geoip-for-ru,⚪🔵🔴 RU сайты
-
 
   # 🌍 Остальные сайты
   - MATCH,🌍 Остальные сайты

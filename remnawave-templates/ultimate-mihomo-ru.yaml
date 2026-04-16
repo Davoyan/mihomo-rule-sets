@@ -274,6 +274,7 @@ rule-providers:
   geosite-ru:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/rules/category-ru.mrs
@@ -281,6 +282,7 @@ rule-providers:
   ai:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
@@ -288,6 +290,7 @@ rule-providers:
   category-porn:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-porn.mrs
@@ -295,6 +298,7 @@ rule-providers:
   geoip-for-ru:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/ip-for-ru/lists/ips-for-ru.mrs
@@ -302,6 +306,7 @@ rule-providers:
   geosite-private:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
@@ -309,6 +314,7 @@ rule-providers:
   discord_domains:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs
@@ -316,6 +322,7 @@ rule-providers:
   speedtest-net:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/speedtest.mrs
@@ -323,6 +330,7 @@ rule-providers:
   remote-control:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-remote-control.mrs
@@ -330,6 +338,7 @@ rule-providers:
   discord_voiceips:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/discord-voice-ip-list.mrs
@@ -337,6 +346,7 @@ rule-providers:
   refilter_domains:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/re-filter/domain-rule.mrs
@@ -344,6 +354,7 @@ rule-providers:
   youtube:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
@@ -351,6 +362,7 @@ rule-providers:
   google-deepmind:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-deepmind.mrs
@@ -358,6 +370,7 @@ rule-providers:
   telegram-ips:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
@@ -365,6 +378,7 @@ rule-providers:
   telegram-domains:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
@@ -372,6 +386,7 @@ rule-providers:
   additional-telegram-ips:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-ips.yaml
@@ -379,6 +394,7 @@ rule-providers:
   additional-telegram-domains:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-domains.yaml
@@ -386,6 +402,7 @@ rule-providers:
   oisd_big:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/oisd/big.mrs
@@ -393,6 +410,7 @@ rule-providers:
   torrent-trackers:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: domain
     format: mrs
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-trackers.mrs
@@ -400,6 +418,7 @@ rule-providers:
   torrent-clients:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-clients.yaml
@@ -407,6 +426,7 @@ rule-providers:
   ru-apps:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/ru-app-list.yaml
@@ -414,6 +434,7 @@ rule-providers:
   ru-inside:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: classical
     format: text
     url: https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-clashx.lst
@@ -421,6 +442,7 @@ rule-providers:
   cloudflare-ips:
     type: http
     proxy: 🚫 Недоступные сайты
+    interval: 86400
     behavior: ipcidr
     format: mrs
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cloudflare.mrs

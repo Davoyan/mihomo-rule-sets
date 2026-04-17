@@ -37,6 +37,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update ru apps in remnawave template"
+          git commit -m "Update additional telegram ips"
           git pull --rebase
           git push

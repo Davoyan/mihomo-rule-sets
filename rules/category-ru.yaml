@@ -16,15 +16,18 @@ payload:
     - +.2gis.ge
     - +.2gis.kg
     - +.2gis.kz
+    - +.2gis.tech
     - +.2gis.tj
     - +.2gis.ua
     - +.2gis.uz
     - +.3ds-secure-payment.com
+    - +.3ebra.net
     - +.4epenaxa.com
     - +.4meeting.me
     - +.5post.market
     - +.absolutbank.com
     - +.accesspoint.uz
+    - +.acmvid.com
     - +.adsadvisor.io
     - +.aihome.dev
     - +.aksyuterian.com
@@ -64,11 +67,13 @@ payload:
     - +.bankonline.center
     - +.bargipsy.com
     - +.beeline.tv
+    - +.beget.com
     - +.beta-bank.com
     - +.billapp.org
     - +.bitrix.info
     - +.bizmrg.com
     - +.bk.mufg.jp
+    - +.bk6bba-resources.com
     - +.bonus-card.ml
     - +.boosty.to
     - +.botmechanic.io
@@ -82,6 +87,7 @@ payload:
     - +.carrotquest.app
     - +.carrotquest.io
     - +.carrottrack.app
+    - +.cdek.shopping
     - +.cdn-vk.net
     - +.cdnvideohub.com
     - +.checkip.amazonaws.com
@@ -144,6 +150,7 @@ payload:
     - +.eligens.io
     - +.emias.info
     - +.energotransbank.com
+    - +.envybox.io
     - +.epicevents.gg
     - +.er-fin.com
     - +.esforce.com
@@ -151,6 +158,10 @@ payload:
     - +.evrasia.rest
     - +.ewisdom.us.kg
     - +.fix-price.com
+    - +.flocktory.com
+    - +.flomni.com
+    - +.fon.bet
+    - +.fon.promo
     - +.four-seasons.group
     - +.gazprombank.com
     - +.gazprombank.investments
@@ -160,10 +171,13 @@ payload:
     - +.genotek.health
     - +.getsynapse.io
     - +.giga.chat
+    - +.gismeteo.net
+    - +.gismeteo.st
     - +.gogettaxi.org
     - +.goicq.org
     - +.goup.ai
     - +.granat.az
+    - +.group-ib.com
     - +.haicomdc.com
     - +.halva.email
     - +.halva.energy
@@ -280,6 +294,8 @@ payload:
     - +.kinorium.com
     - +.kk.bank
     - +.knightspeak.com
+    - +.kontur-inc.com
+    - +.kontur.host
     - +.korona-perevod.com
     - +.korona.com
     - +.korona.net
@@ -305,6 +321,7 @@ payload:
     - +.lmru.tech
     - +.locko-bank.info
     - +.lovina.app
+    - +.magnit.com
     - +.mail-carrotquest.io
     - +.mailicq.org
     - +.mangalib.me
@@ -324,6 +341,7 @@ payload:
     - +.mirandaicq.com
     - +.miya-news.online
     - +.mizuhogroup.com
+    - +.mobile-bb.com
     - +.mobile-icq.com
     - +.mobileicq.com
     - +.moex.com
@@ -333,12 +351,14 @@ payload:
     - +.mp.world
     - +.mpgw-my.com
     - +.mradx.net
+    - +.mvideo.edna.io
     - +.mvk.com
     - +.my-manager-account.com
     - +.my.com
     - +.my.games
     - +.myadx.net
     - +.mycdn.me
+    - +.myoffice.team
     - +.mytopf.com
     - +.mytrk.link
     - +.nasporte.life
@@ -351,12 +371,15 @@ payload:
     - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
+    - +.ognihome.com
     - +.oidconnect.com
     - +.ok.me
     - +.okko.sport
     - +.okko.tv
+    - +.okkoapi.tv
     - +.okl.lt
     - +.okolo.app
+    - +.oskelly.co
     - +.ozon.by
     - +.ozon.com
     - +.ozon.com.by
@@ -392,6 +415,7 @@ payload:
     - +.procombank.com
     - +.prod-my.games
     - +.prodcontest.com
+    - +.promodj.com
     - +.prostobank.online
     - +.psk
     - +.pskb.com
@@ -407,6 +431,7 @@ payload:
     - +.rostaxi.org
     - +.rshb.pro
     - +.rsscenter.cloud
+    - +.rteam.tech
     - +.ru
     - +.ru.abchina.com
     - +.ru.ccb.com
@@ -415,9 +440,11 @@ payload:
     - +.ruhub.tv
     - +.rusagrobank.com
     - +.russiacalling.com
+    - +.russiatoday.com
     - +.rustore.team
     - +.rustore.tv
     - +.rwbautomation.tech
+    - +.saas-support.com
     - +.safeliner.tech
     - +.sage-observability.tech
     - +.sber-bank.by
@@ -462,10 +489,12 @@ payload:
     - +.servercore.live
     - +.set.ki
     - +.shedevrum.ai
+    - +.shop-rt.com
     - +.showip.net
     - +.sistema-capital.com
     - +.skbx.pro
     - +.skillbox.pro
+    - +.sky.pro
     - +.slavia-bank.com
     - +.slaviabank.com
     - +.slc.tl
@@ -474,6 +503,7 @@ payload:
     - +.smartmed.pro
     - +.smotreshka.tv
     - +.smsemailstats.com
+    - +.sokolov.io
     - +.sourcecraft.dev
     - +.sovcombank.business
     - +.sovcombank.com
@@ -489,6 +519,7 @@ payload:
     - +.support-uber.com
     - +.svoy.academy
     - +.svy59w.shop
+    - +.swentr.site
     - +.t-atm.org
     - +.t-avia.org
     - +.t-bank.by
@@ -502,6 +533,7 @@ payload:
     - +.t1.cloud
     - +.tamtam.chat
     - +.tarantool.io
+    - +.targetads.io
     - +.tatar
     - +.taxiaid.org
     - +.taxiguru.org
@@ -538,6 +570,7 @@ payload:
     - +.turbopages.org
     - +.tynkoff.cc
     - +.ubs.com
+    - +.uma.media
     - +.umschool.net
     - +.uni.rest
     - +.unidraw.io
@@ -605,6 +638,7 @@ payload:
     - +.wbwh.tech
     - +.webvisor.com
     - +.webvisor.org
+    - +.whitesaas.com
     - +.whoosh.bike
     - +.wibes.com
     - +.wildberries.am
@@ -716,6 +750,7 @@ payload:
     - +.yastatic.net
     - +.yclients.com
     - +.youla.io
+    - +.yourgood.app
     - +.za-group.net
     - +.zentotem.net
     - +.zvuk-b2b.com

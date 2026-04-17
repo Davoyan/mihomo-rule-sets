@@ -6,7 +6,7 @@ on:
     - cron: '0 3 * * *'
 
 jobs:
-  update-ru-apps:
+  update-additional-telegram-ips:
     runs-on: ubuntu-latest
     permissions:
       contents: write

@@ -12,70 +12,66 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v6
-        with:
-          persist-credentials: false
+    - name: Checkout repo
+      uses: actions/checkout@v6
+      with:
+        persist-credentials: false
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.11'
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.11'
 
-      - name: Install dependencies
-        run:  |
-          sudo apt update
-          sudo apt install -y curl wget git jq
-          bash <(curl -fsSL https://sing-box.app/deb-install.sh)
-          pip install maxminddb
+    - name: Install dependencies
+      run:  |
+        sudo apt update
+        sudo apt install -y curl wget git jq
+        bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+        pip install maxminddb
 
-      - name: Download IPinfo Lite CSV
-        env:
-          IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
-        run: |
-          curl -L "https://ipinfo.io/data/ipinfo_lite.csv.gz?token=${IPINFO_TOKEN}" -o ip-for-ru/ipinfo_lite.csv.gz
-          gunzip -f ip-for-ru/ipinfo_lite.csv.gz
+    - name: Download IPinfo Lite CSV
+      env:
+        IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
+      run: |
+        curl -L "https://ipinfo.io/data/ipinfo_lite.csv.gz?token=${IPINFO_TOKEN}" -o ip-for-ru/ipinfo_lite.csv.gz
+        gunzip -f ip-for-ru/ipinfo_lite.csv.gz
 
-      - name: Download MaxMind MMDB
-        run: |
-          curl -L "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb" -o ip-for-ru/maxmind.mmdb
+    - name: Download MaxMind MMDB
+      run: |
+        curl -L "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb" -o ip-for-ru/maxmind.mmdb
 
-      - name: Generate ip lists
-        run: |
-          mkdir -p ip-for-ru/lists
-          python ip-for-ru/generate.py
+    - name: Generate ip lists
+      run: |
+        mkdir -p ip-for-ru/lists
+        python ip-for-ru/generate.py
 
-      - name: Install mihomo
-        run: |
-          M_VER=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
-            grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
-          wget -O mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz"
-          gunzip -f mihomo.gz
-          chmod +x mihomo
-          sudo mv mihomo /usr/local/bin/mihomo
-          mihomo -v
+    - name: Install mihomo
+      run: |
+        M_VER=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
+          grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
+        wget -O mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz"
+        gunzip -f mihomo.gz
+        chmod +x mihomo
+        sudo mv mihomo /usr/local/bin/mihomo
+        mihomo -v
 
-      - name: Convert .yaml to .mrs (ipcidr)
-        run: |
-          find ip-for-ru/lists -type f -name "*.yaml" -print0 | while IFS= read -r -d '' file; do
-            mihomo convert-ruleset ipcidr yaml "$file" "${file%.yaml}.mrs"
-          done
+    - name: Convert .yaml to .mrs (ipcidr)
+      run: |
+        find ip-for-ru/lists -type f -name "*.yaml" -print0 | while IFS= read -r -d '' file; do
+          mihomo convert-ruleset ipcidr yaml "$file" "${file%.yaml}.mrs"
+        done
 
-      - name: Generate srs
-        run: |
-         sing-box rule-set compile --output ip-for-ru/lists/ips-for-ru-singbox.srs ip-for-ru/lists/ips-for-ru-singbox.json
+    - name: Generate srs
+      run: |
+       sing-box rule-set compile --output ip-for-ru/lists/ips-for-ru-singbox.srs ip-for-ru/lists/ips-for-ru-singbox.json
 
-      - name: Commit and push generated files
-        run: |
-          git config user.name "mihomo-rule-sets bot"
-          git config user.email "noreply@github.com"
-          git add ip-for-ru/lists/*
-          
-          if git diff --cached --quiet; then
-            echo "No changes"
-            exit 0
-          fi
-          
-          git commit -m "Update IP for RU lists" || echo "No changes"
-          git pull --rebase
-          git push
+    - name: Commit and push generated files
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "IP for RU lists Generator"
+        git config user.email "noreply@github.com"
+        git add ip-for-ru/lists/*
+        git commit -m "Update IP for RU lists" || echo "No changes"
+        git pull --rebase
+        git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"

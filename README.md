@@ -10,7 +10,7 @@
 Если вы не используете шаблон как учебный пример, а используете его непосредственно, то рекомендуется его переодически обновлять.
 
 Рекомендуемые клиенты:
-- Android / Windows / Linux / macOS - [FlClashX](https://github.com/pluralplay/FlClashX) 
+- Android / Windows / Linux / macOS - [FlClashX](https://github.com/pluralplay/FlClashX)  или [Koala Clash](https://github.com/coolcoala/koala-clash)
 - ios - [Rabbit Hole](https://apps.apple.com/app/rabbithole-vpn-client/id6683309629) 
 
 ## 📖 Инструкция в картинках

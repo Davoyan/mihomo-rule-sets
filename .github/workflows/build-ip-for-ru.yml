@@ -37,8 +37,29 @@ jobs:
           gunzip -f ip-for-ru/ipinfo_lite.csv.gz
 
       - name: Download MaxMind MMDB
+        env:
+          MAXMIND_ACCOUNT_ID: ${{ secrets.MAXMIND_ACCOUNT_ID }}
+          MAXMIND_LICENSE_KEY: ${{ secrets.MAXMIND_LICENSE_KEY }}
         run: |
-          curl -L "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb" -o ip-for-ru/maxmind.mmdb
+          set -euo pipefail
+      
+          mkdir -p ip-for-ru
+          workdir="$(mktemp -d)"
+      
+          curl -fsSL -u "$MAXMIND_ACCOUNT_ID:$MAXMIND_LICENSE_KEY" \
+            "https://download.maxmind.com/geoip/databases/GeoLite2-Country/download?suffix=tar.gz" \
+            -o "$workdir/GeoLite2-Country.tar.gz"
+      
+          tar -xzf "$workdir/GeoLite2-Country.tar.gz" -C "$workdir"
+      
+          mmdb_file="$(find "$workdir" -type f -name '*.mmdb' | head -n 1)"
+      
+          if [ -z "$mmdb_file" ]; then
+            echo "No .mmdb file found in MaxMind archive"
+            exit 1
+          fi
+      
+          cp "$mmdb_file" ip-for-ru/maxmind.mmdb
 
       - name: Generate ip lists
         run: |

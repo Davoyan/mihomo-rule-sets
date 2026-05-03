@@ -3,7 +3,7 @@ name: Build IP for RU lists
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '30 1 * * *'
 
 jobs:
   build-ru-ip-lists:

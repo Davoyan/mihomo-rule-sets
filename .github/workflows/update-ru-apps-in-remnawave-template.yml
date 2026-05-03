@@ -3,7 +3,7 @@ name: Update ru apps in remnawave template
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '35 1 * * *'
 
 jobs:
   update-ru-apps:

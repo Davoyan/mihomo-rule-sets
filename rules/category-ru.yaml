@@ -49,6 +49,7 @@ payload:
     - +.altbank.com
     - +.altynbank.com
     - +.animego.me
+    - +.antiphishing.nl
     - +.anytimeru.com
     - +.aodahl.com
     - +.apptrackpets.com
@@ -79,6 +80,7 @@ payload:
     - +.bronevik.com
     - +.by
     - +.cabconnect.org
+    - +.callbackkiller.com
     - +.careeny.xyz
     - +.careery.xyz
     - +.carrot-mail.io
@@ -86,9 +88,11 @@ payload:
     - +.carrotquest.app
     - +.carrotquest.io
     - +.carrottrack.app
+    - +.cbkiller.com
     - +.cdek.shopping
     - +.cdn-vk.net
     - +.cdnvideohub.com
+    - +.cert-gib.com
     - +.checkip.amazonaws.com
     - +.chipcore.com
     - +.chizhik.club
@@ -109,6 +113,7 @@ payload:
     - +.coronaperevod.com
     - +.creditdevelopment.pro
     - +.cups.online
+    - +.cybercrimecon.com
     - +.dahlmessenger.com
     - +.dashly.app
     - +.dashly.help
@@ -147,34 +152,60 @@ payload:
     - +.eligens.io
     - +.emias.info
     - +.energotransbank.com
+    - +.envybox.company
+    - +.envybox.family
     - +.envybox.io
+    - +.envybox.kg
+    - +.envycdp.com
+    - +.envycrm.com
     - +.epicevents.gg
     - +.er-fin.com
     - +.esforce.com
     - +.etna.ai
     - +.evrasia.rest
     - +.ewisdom.us.kg
+    - +.f6.dev
+    - +.f6.security
+    - +.facct.email
     - +.fix-price.com
     - +.flocktory.com
     - +.flomni.com
     - +.fon.bet
     - +.fon.promo
     - +.four-seasons.group
+    - +.g-ib.ae
+    - +.g-ib.sg
+    - +.g-ib.us
     - +.gazprombank.com
     - +.gazprombank.investments
     - +.gazprombank.tech
     - +.genetic-technologies.am
     - +.genotek.am
+    - +.genotek.es
+    - +.genotek.eu
     - +.genotek.health
     - +.getsynapse.io
+    - +.gib-global.com
+    - +.gib.sg
+    - +.gibdev.net
     - +.giga.chat
+    - +.gismeteo.com
     - +.gismeteo.net
     - +.gismeteo.st
     - +.gogettaxi.org
     - +.goicq.org
     - +.goup.ai
     - +.granat.az
+    - +.group-ib.ae
+    - +.group-ib.co.uk
     - +.group-ib.com
+    - +.group-ib.de
+    - +.group-ib.eu
+    - +.group-ib.sg
+    - +.group-ib.us
+    - +.groupib.ae
+    - +.groupib.sg
+    - +.groupib.us
     - +.haicomdc.com
     - +.halva.email
     - +.halva.energy
@@ -328,6 +359,8 @@ payload:
     - +.megafon.com
     - +.megamarket.tech
     - +.memealerts.com
+    - +.meteofor.com
+    - +.meteofor.st
     - +.meteum.ai
     - +.mindbox.cloud
     - +.mindbox.group
@@ -341,12 +374,14 @@ payload:
     - +.mobile-icq.com
     - +.mobileicq.com
     - +.moex.com
+    - +.more.tv
     - +.moscow
     - +.mosmetro.tech
     - +.movika.com
     - +.mp.world
     - +.mpgw-my.com
     - +.mradx.net
+    - +.mts-ws.net
     - +.mvideo.edna.io
     - +.mvk.com
     - +.my-manager-account.com
@@ -556,6 +591,7 @@ payload:
     - +.topdeposit.pro
     - +.trbcdn.net
     - +.turbopages.org
+    - +.tvoyodbo.online
     - +.tynkoff.cc
     - +.ubs.com
     - +.uma.media
@@ -640,6 +676,7 @@ payload:
     - +.wildberries.tm
     - +.wildberries.uz
     - +.windsurf.com
+    - +.wink.am
     - +.womba-t.org
     - +.x5.ai
     - +.x5.com

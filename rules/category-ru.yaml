@@ -280,6 +280,7 @@ payload:
     - +.jivosite.com
     - +.jump.finance
     - +.jump.taxi
+    - +.justveryok.com
     - +.kamkombank.pro
     - +.kaspersky-labs.com
     - +.kaspersky.be
@@ -316,6 +317,7 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
+    - +.keyboardmen.com
     - +.kinescope.io
     - +.kinescopecdn.net
     - +.kinorium.com
@@ -402,6 +404,12 @@ payload:
     - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
+    - +.odnoklasniki.ua
+    - +.odnoklassniki.am
+    - +.odnoklassniki.co.ee
+    - +.odnoklassniki.eu
+    - +.odnoklassniki.lv
+    - +.odnoklassniki.tj
     - +.ognihome.com
     - +.oidconnect.com
     - +.ok.me
@@ -446,6 +454,8 @@ payload:
     - +.pskb.com
     - +.pushgrow.io
     - +.pvubank.com
+    - +.pz.help
+    - +.rabbitcounter.com
     - +.redheadsound.studio
     - +.restream-media.net
     - +.roistat.com
@@ -470,6 +480,7 @@ payload:
     - +.saas-support.com
     - +.safeliner.tech
     - +.sage-observability.tech
+    - +.sayeasy.eu
     - +.sber-impulse.com
     - +.sber.cfd
     - +.sber.cn

@@ -55,6 +55,7 @@ payload:
     - +.apptrackpets.com
     - +.armgs.team
     - +.astrasend.net
+    - +.at.ua
     - +.atomyze.tech
     - +.attachmy.com
     - +.autobahn.db.com
@@ -355,6 +356,7 @@ payload:
     - +.mailicq.org
     - +.mangalib.me
     - +.maritimebank.com
+    - +.mcs.st
     - +.medsi.com
     - +.medsi.pro
     - +.medtrum.eu
@@ -605,6 +607,33 @@ payload:
     - +.tvoyodbo.online
     - +.tynkoff.cc
     - +.ubs.com
+    - +.ucoz.ae
+    - +.ucoz.club
+    - +.ucoz.co
+    - +.ucoz.co.il
+    - +.ucoz.co.uk
+    - +.ucoz.com
+    - +.ucoz.com.br
+    - +.ucoz.com.ro
+    - +.ucoz.de
+    - +.ucoz.es
+    - +.ucoz.fr
+    - +.ucoz.hu
+    - +.ucoz.kz
+    - +.ucoz.lv
+    - +.ucoz.md
+    - +.ucoz.net
+    - +.ucoz.org
+    - +.ucoz.pl
+    - +.ucoz.site
+    - +.ucoz.ua
+    - +.ucozmail.com
+    - +.ucozmedia.com
+    - +.ucoztemplates.com
+    - +.ukit.ai
+    - +.ukit.com
+    - +.ukit.group
+    - +.ukit.me
     - +.uma.media
     - +.umschool.net
     - +.uni.rest
@@ -612,6 +641,7 @@ payload:
     - +.unirest.tech
     - +.unistream.com
     - +.userapi.com
+    - +.usocial.pro
     - +.vakobank.com
     - +.viqeo.tv
     - +.viqeotv.com
@@ -623,12 +653,15 @@ payload:
     - +.vk.com
     - +.vk.company
     - +.vk.design
+    - +.vk.kz
     - +.vk.link
     - +.vk.me
     - +.vk.team
     - +.vkcache.com
     - +.vkcdnservice.com
     - +.vkclips.app
+    - +.vkcloud-static.kz
+    - +.vkcloud.kz
     - +.vkcs.cloud
     - +.vkgo.app
     - +.vklive.app
@@ -646,6 +679,7 @@ payload:
     - +.vkuserlive.net
     - +.vkuservideo.com
     - +.vkuservideo.net
+    - +.vkworkspace.kz
     - +.vmailru.net
     - +.vozvratnalogov.online
     - +.vscale.blog

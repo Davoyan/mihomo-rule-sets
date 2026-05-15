@@ -9,6 +9,26 @@ MAXMIND_MMDB = "maxmind.mmdb"
 
 WANTED = {"RU", "BY"}
 
+WANTED_AS = [
+    "AS49281",  # M100 LLC
+    "AS47764",  # LLC VK (Mail.ru)
+    "AS60476",  # LLC VK (Digital Transformation Plus LLC)
+    "AS60863",  # LLC VK
+    "AS49988",  # LLC VK
+    "AS21051",  # ASTRUM LLC
+    "AS199295", # LLC VK
+    "AS205830", # LLC VK (Digital Transformation Plus LLC)
+    "AS201817", # VK Tech Kazakhstan LLP
+    "AS207970", # LLC VK
+    "AS203502", # JOINT STOCK COMPANY "TELEGA"
+    "AS47541",  # LLC VK
+    "AS47542",  # LLC VK
+    "AS28709",  # LLC VK
+    "AS62243",  # LLC VK
+    "AS207581", # LLC VK
+    "AS57973",  # LLC VK
+]
+
 KEYWORDS_AS = ["yandex", "kaspersky", "VKontakte", "LLC VK", "Rostelecom", "GRCHC", "ru-center", "EdgeCenter LLC", 
                "Vimpelcom", "CDNvideo", "Sovkombank", "Sberbank", "Alfa-Bank", "Russian Agricultural Bank", "ngenix", "SERVICEPIPE", 
                "DDOS-GUARD", "Moscow city telephone network", "ALEF-BANK", "Ruform LLC", "Nauka-Svyaz", "Sovremennye setevye tekhnologii"]
@@ -38,27 +58,28 @@ def iso_from_maxmind(record: dict) -> str | None:
 
 
 def ipinfo_matches(row: dict) -> bool:
-    if row.get("country_code") in WANTED:
+    if (row.get("country_code") or "").casefold() in {x.casefold() for x in WANTED}:
+        return True
+
+    row_asn = (row.get("asn") or "").casefold()
+    if row_asn and row_asn in (x.casefold() for x in WANTED_AS):
         return True
 
     as_name = (row.get("as_name") or "").casefold()
     as_domain = (row.get("as_domain") or "").casefold()
 
     for kw in KEYWORDS_AS:
-        kw = kw.casefold()
-        if kw in as_name:
+        if kw.casefold() in as_name:
             return True
-            
+
     for kw in KEYWORDS_DOMAIN:
-        kw = kw.casefold()
-        if kw in as_domain:
+        if kw.casefold() in as_domain:
             return True
 
     for kw in FULL_DOMAIN:
-        kw = kw.casefold()
-        if kw == as_domain:
+        if kw.casefold() == as_domain:
             return True
-            
+
     return False
 
 

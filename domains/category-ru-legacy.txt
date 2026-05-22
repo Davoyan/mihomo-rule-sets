@@ -1,10 +1,17 @@
+#Added by Davoyan
+domain:lomont.site
+domain:shopstory.live
+domain:remanga.org
+domain:kinescope.io
+domain:kudago.com
+domain:by
+
 # Direct for checkers of MAX
 
 domain:ipify.org
 domain:checkip.amazonaws.com
 domain:ifconfig.me
 
-domain:by
 
 # custom for easy checking
 

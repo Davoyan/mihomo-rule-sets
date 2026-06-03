@@ -56,7 +56,6 @@ WANTED_AS = [
 
     # Yandex
     "AS13238",  # YANDEX LLC
-    "AS20144",  # ICANN - L-root (Yandex)
     "AS207304", # Y. Izdeu men Jarnama LLP (Yandex)
 ]
 

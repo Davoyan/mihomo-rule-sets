@@ -26,6 +26,7 @@ FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "majordom
                "antiddos.solutions"]
 
 WANTED_AS = [
+    # VK AND MAILRU
     "AS49281",  # M100 LLC
     "AS47764",  # LLC VK (Mail.ru)
     "AS60476",  # LLC VK (Digital Transformation Plus LLC)
@@ -43,6 +44,20 @@ WANTED_AS = [
     "AS62243",  # LLC VK
     "AS207581", # LLC VK
     "AS57973",  # LLC VK
+
+    # Sberbank
+    "AS35237",  # Sberbank of Russia PJSC
+    "AS206673", # Sberbank-Telecom LLC
+    "AS33844",  # Sberbank of Russia PJSC
+    "AS60122",  # Sberbank of Russia PJSC
+    "AS47457",  # Sberbank of Russia PJSC
+    "AS44408",  # Sberbank of Russia PJSC
+    "AS58112",  # Sberbank of Russia PJSC
+
+    # Yandex
+    "AS13238",  # YANDEX LLC
+    "AS20144",  # ICANN - L-root (Yandex)
+    "AS207304", # Y. Izdeu men Jarnama LLP (Yandex)
 ]
 
 

@@ -57,6 +57,20 @@ WANTED_AS = [
     # Yandex
     "AS13238",  # YANDEX LLC
     "AS207304", # Y. Izdeu men Jarnama LLP (Yandex)
+
+    # Government / State infrastructure / Telecom
+    "AS61280",  # FGUP "GRCHC"
+    "AS196641", # Federal Unitary State Enterprise General Radio Frequency Center
+    "AS57107",  # Federal State Unitary Enterprise "Russian Satellite Communications Company"
+    "AS41853",  # Limited Liability Company NTCOM
+    "AS12695",  # LLC Digital Network
+    "AS8752",   # AO "ASVT"
+    "AS213853", # FGUP "GRCHC"
+    "AS210109", # LLC "Kurgan-Telecom"
+    "AS44923",  # Saint-Petersburg Computer Networks Ltd.
+    "AS59494",  # Enigma Telecom Ltd.
+    "AS20702",  # JSC Russian Railways
+    "AS43797",  # The Federal Guard Service of the Russian Federation
 ]
 
 

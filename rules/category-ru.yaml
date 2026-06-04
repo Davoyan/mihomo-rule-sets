@@ -3,6 +3,7 @@ payload:
     - +.sovcombank.*
     - +.tinkoff.*
     - +.1018213540.rsc.cdn77.org
+    - +.1917live.red
     - +.1cfresh.com
     - +.1internet.tv
     - +.24h.tv
@@ -27,8 +28,10 @@ payload:
     - +.absolutbank.com
     - +.accesspoint.uz
     - +.acmvid.com
+    - +.actualidad-rt.com
     - +.adsadvisor.io
     - +.adygtelecom.com
+    - +.ahilesva.info
     - +.aihome.dev
     - +.aksyuterian.com
     - +.alefbank.com
@@ -56,6 +59,10 @@ payload:
     - +.aodahl.com
     - +.apptrackpets.com
     - +.armgs.team
+    - +.artel.watch
+    - +.arteldoc.com
+    - +.arteldoc.tv
+    - +.asiangooglenetwork.com
     - +.astrasend.net
     - +.at.ua
     - +.atomyze.tech
@@ -65,9 +72,12 @@ payload:
     - +.avito.st
     - +.avs.io
     - +.baltinvestbank.com
+    - +.baltnews.com
+    - +.baltnews.lt
     - +.bank131.com
     - +.banka-ui.dev
     - +.bankonline.center
+    - +.baranky.com
     - +.bargipsy.com
     - +.beeline.tv
     - +.beget.com
@@ -78,6 +88,7 @@ payload:
     - +.bk.mufg.jp
     - +.bk6bba-resources.com
     - +.bonus-card.ml
+    - +.book1917.live
     - +.boosty.to
     - +.botmechanic.io
     - +.bronevik.com
@@ -125,6 +136,13 @@ payload:
     - +.dashlytrack.app
     - +.datacloudmy.com
     - +.dbo-dengi.online
+    - +.de-rt.com
+    - +.de-rt.org
+    - +.de-rtnews.com
+    - +.de-rtnews.net
+    - +.dert.online
+    - +.dert.site
+    - +.dert.tech
     - +.dev-my.com
     - +.dev-my.games
     - +.dodois.com
@@ -136,6 +154,7 @@ payload:
     - +.dorenko.tv
     - +.driveawaytaxi.org
     - +.drivercard.site
+    - +.drobbox.pro
     - +.drweb-av.de
     - +.drweb-av.es
     - +.drweb-av.it
@@ -146,6 +165,10 @@ payload:
     - +.drweb.fr
     - +.drweb.kz
     - +.drweb.uz
+    - +.eadaily.com
+    - +.eadaily.info
+    - +.eadaily.net
+    - +.eadaily.org
     - +.eaptechka.online
     - +.edadeal.io
     - +.eginvestments.net
@@ -163,7 +186,14 @@ payload:
     - +.envycrm.com
     - +.epicevents.gg
     - +.er-fin.com
+    - +.es-rt.com
     - +.esforce.com
+    - +.esrt.online
+    - +.esrt.press
+    - +.esrt.site
+    - +.esrt.space
+    - +.esrt.tech
+    - +.esrt.website
     - +.etna.ai
     - +.evrasia.rest
     - +.ewisdom.us.kg
@@ -176,9 +206,13 @@ payload:
     - +.fon.bet
     - +.fon.promo
     - +.four-seasons.group
+    - +.freeassange.tech
+    - +.freede.tech
+    - +.freedert.online
     - +.g-ib.ae
     - +.g-ib.sg
     - +.g-ib.us
+    - +.gazetarussa.com.br
     - +.gazprombank.com
     - +.gazprombank.investments
     - +.gazprombank.tech
@@ -199,6 +233,7 @@ payload:
     - +.goicq.org
     - +.goup.ai
     - +.granat.az
+    - +.green-box-tv.com
     - +.group-ib.ae
     - +.group-ib.co.uk
     - +.group-ib.com
@@ -209,6 +244,7 @@ payload:
     - +.groupib.ae
     - +.groupib.sg
     - +.groupib.us
+    - +.gw2ru.com
     - +.haicomdc.com
     - +.halva.email
     - +.halva.energy
@@ -269,6 +305,7 @@ payload:
     - +.ipify.org
     - +.iplocate.io
     - +.it-territory.com
+    - +.jinrieluosi.cn
     - +.jivo.chat
     - +.jivochat.co.in
     - +.jivochat.co.za
@@ -321,6 +358,7 @@ payload:
     - +.kaspersky.rs
     - +.kaspersky.se
     - +.keyboardmen.com
+    - +.khangar.net
     - +.kinescope.io
     - +.kinescopecdn.net
     - +.kinorium.com
@@ -334,6 +372,7 @@ payload:
     - +.koronapay.com
     - +.koronaperevod.com
     - +.koshelek.app
+    - +.ktech.team
     - +.kuban-credit.biz
     - +.kuban-credit.com
     - +.kuban-credit.net
@@ -410,6 +449,8 @@ payload:
     - +.netmonet.co
     - +.ngenix.net
     - +.noda.finance
+    - +.noticias-rt.com
+    - +.notimundo.press
     - +.odnoklasniki.ua
     - +.odnoklassniki.am
     - +.odnoklassniki.co.ee
@@ -445,10 +486,12 @@ payload:
     - +.perekrestok.com
     - +.perevodkorona.com
     - +.pixonic.com
+    - +.pobeda.page
     - +.polly.events
     - +.popmechanic.io
     - +.posl-t.org
     - +.premier.one
+    - +.premiumlive.site
     - +.priovtb.com
     - +.probank.pro
     - +.procombank.com
@@ -462,26 +505,84 @@ payload:
     - +.pvubank.com
     - +.pz.help
     - +.rabbitcounter.com
+    - +.rbth.com
     - +.redheadsound.studio
     - +.remanga.org
     - +.reso-med.com
     - +.restream-media.net
     - +.roistat.com
+    - +.romanovs100.com
     - +.rosbank-credit.com
     - +.roscap.com
+    - +.rossiyasegodnya.com
     - +.rostaxi.org
     - +.rshb.pro
     - +.rsscenter.cloud
+    - +.rt-school.online
+    - +.rt.com
+    - +.rt.rs
+    - +.rtarabic.com
+    - +.rtarabic.net
+    - +.rtarabic.org
+    - +.rtbrasil.com
+    - +.rtbrasil.info
+    - +.rtde.agency
+    - +.rtde.expert
+    - +.rtde.express
+    - +.rtde.info
+    - +.rtde.life
+    - +.rtde.live
+    - +.rtde.me
+    - +.rtde.media
+    - +.rtde.online
+    - +.rtde.org
+    - +.rtde.press
+    - +.rtde.site
+    - +.rtde.team
+    - +.rtde.tech
+    - +.rtde.website
+    - +.rtde.world
+    - +.rtde.xyz
+    - +.rtdefree.info
+    - +.rtdefree.me
+    - +.rtdefree.online
+    - +.rtdefree.tech
+    - +.rtdoc.tv
+    - +.rtdocumentary.online
+    - +.rteam.dev
     - +.rteam.tech
+    - +.rtenafrique.tv
+    - +.rtenfrancais.tv
+    - +.rtenfrance.tv
+    - +.rtespanol.com
+    - +.rtfrance.tv
+    - +.rtnewsde.com
+    - +.rtnewsde.online
+    - +.rtnewsde.pro
+    - +.rtnewsde.site
+    - +.rtnewsde.tech
+    - +.rtnewsru.com
+    - +.rtrunews.com
+    - +.rttv.com
     - +.ru
     - +.ru.abchina.com
     - +.ru.ccb.com
     - +.ru.com
     - +.ru.net
     - +.ruhub.tv
+    - +.runewsrt.com
+    - +.ruptly.agency
+    - +.ruptly.tv
+    - +.ruptly.video
+    - +.rurtnews.com
     - +.rusagrobank.com
+    - +.russiabeyond.com
     - +.russiacalling.com
+    - +.russiaislove.com
     - +.russiatoday.com
+    - +.russiatoday.net
+    - +.russiatoday.tv
+    - +.russieactuelle.fr
     - +.rustore.team
     - +.rustore.tv
     - +.rwbautomation.tech
@@ -539,12 +640,14 @@ payload:
     - +.sky.pro
     - +.slavia-bank.com
     - +.slaviabank.com
+    - +.slavicstar.com
     - +.slc.tl
     - +.smailru.net
     - +.smart-cards.pro
     - +.smartmed.pro
     - +.smotreshka.tv
     - +.smsemailstats.com
+    - +.sn-esp.site
     - +.sokolov.io
     - +.sourcecraft.dev
     - +.sovcombank.business
@@ -554,6 +657,10 @@ payload:
     - +.spasibo.digital
     - +.spasibo.market
     - +.spbbank.com
+    - +.sputnikglobe.com
+    - +.sputnikimages.com
+    - +.sputnikmediabank.com
+    - +.sputniknews.com
     - +.srv-hub.org
     - +.static-storage.net
     - +.staticmy.com
@@ -607,6 +714,7 @@ payload:
     - +.tlnkoff-open.xyz
     - +.tochka-tech.com
     - +.tochka.com
+    - +.tok.media
     - +.topcards.pro
     - +.topdeposit.pro
     - +.trbcdn.net
@@ -705,6 +813,7 @@ payload:
     - +.vtbpartners.com
     - +.vtbrussia.com
     - +.warehouse.domains
+    - +.watchingthehawks.com
     - +.wb.am
     - +.wb.kg
     - +.wb.kz
@@ -730,6 +839,7 @@ payload:
     - +.windsurf.com
     - +.wink.am
     - +.womba-t.org
+    - +.worldcuprussia.com
     - +.x5.ai
     - +.x5.com
     - +.x5.digital

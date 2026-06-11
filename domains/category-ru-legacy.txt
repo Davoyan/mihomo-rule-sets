@@ -5,6 +5,8 @@ domain:remanga.org
 domain:kinescope.io
 domain:kudago.com
 domain:by
+# Anime sites player checker
+domain:kalarona.org
 
 # Direct for checkers of MAX
 

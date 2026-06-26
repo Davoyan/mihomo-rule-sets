@@ -307,7 +307,7 @@ WANTED_AS = [
     "AS8371",  # Vimpelcom-NN PJSC "Vimpelcom"
     "AS34894",  # ATEL-AS PJSC "Vimpelcom"
     "AS34747",  # ISI-AS PJSC "Vimpelcom"
-    "AS12543",  # TODO: holder not found
+    "AS12543",  # PJSC "Vimpelcom"
     "AS13257",  # POLARCOM-AS PJSC "Vimpelcom"
     "AS28703",  # URAL-INTERCARD-AS PJSC "Vimpelcom"
     "AS42245",  # ITECH-AS PJSC "Vimpelcom"
@@ -363,7 +363,7 @@ WANTED_AS = [
     "AS41727",  # ERTH-KIROV-AS JSC "ER-Telecom Holding"
     "AS41754",  # ERTH-PENZA-AS JSC "ER-Telecom Holding"
     "AS51645",  # IRKUTSK-AS JSC "ER-Telecom Holding"
-    "AS41843",  # TODO: holder not found
+    "AS41843",  # JSC "ER-Telecom Holding" Omsk branch
     "AS34150",  # RU-ERTH-KRASNODAR-AS JSC "ER-Telecom Holding"
     "AS43314",  # DIANET-AS JSC "ER-Telecom Holding"
     "AS47111",  # RU-AKADO-SPB-AS JSC "ER-Telecom Holding"

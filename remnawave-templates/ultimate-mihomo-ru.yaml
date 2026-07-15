@@ -169,20 +169,6 @@ proxies:
     type: dns
 
 proxy-groups:
-  - name: GLOBAL
-    type: select
-    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
-    proxies:
-      - 🎲 Любой доступный сервер
-      - 🚫 Недоступные сайты
-      - ▶️ YouTube
-      - 💬 Discord
-      - ➤ Telegram
-      - ⚪🔵🔴 RU сайты
-      - 🌍 Остальные сайты
-      - 🇷🇺 Без VPN
-      - REJECT
-
   - name: 🚫 Недоступные сайты
     icon: https://cdn.jsdelivr.net/gh/remnawave/templates@main/icons/Blocked.png
     type: select

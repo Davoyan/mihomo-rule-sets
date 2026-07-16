@@ -309,7 +309,7 @@ rule-providers:
     type: http
     proxy: 🚫 Недоступные сайты
     interval: 86400
-    behavior: ipcidr
+    behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-ips.yaml
     path: ./rule-sets/additional-telegram-ips.yaml
@@ -317,7 +317,7 @@ rule-providers:
     type: http
     proxy: 🚫 Недоступные сайты
     interval: 86400
-    behavior: domain
+    behavior: classical
     format: yaml
     url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/additional-telegram-domains.yaml
     path: ./rule-sets/additional-telegram-domains.yaml
@@ -373,10 +373,10 @@ rule-providers:
     type: inline
     payload:
       - IP-CIDR,172.232.25.131/32 #IP для чата Warframe (Пример)
-    behavior: ipcidr
+    behavior: classical
   geoip-private:
     type: inline
-    behavior: ipcidr
+    behavior: classical
     payload:
       - IP-CIDR,0.0.0.0/8
       - IP-CIDR,10.0.0.0/8

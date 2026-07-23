@@ -79,7 +79,7 @@
 Самый простой способ поддержать меня, это нажать на звездочку (⭐) в верхней части страницы.
 Если вы вдруг захотите меня поддержать деньгой:
 
-- **TON: `UQAMcrN7fDEX5BV4Ui9LpJeQj_OfDttUiQKz-UsbiQrpCkgZ`**
+- **GRAM (TON): `UQCVlQkCHDJzlF0AfQmgvCa2rEASVG4gYAU6cAU_IR9qVQQs`**
 - **BTC: `bc1qxl05dhaxp5s3vpu4njx4mrzqfccqlhgfsp5dyu`**
 - **SOL (SPL): `3qT7wRUKXiTmpXvLuxT9J4STPZqEhWbVcn4NgZPyLMLi`**
 - **ETH (ERC20): `0x90DF7F6eD4d7d0bD8cA6790c0712D21f0a4da55D`**

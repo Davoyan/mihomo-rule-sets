@@ -7,6 +7,7 @@ domain:kudago.com
 domain:by
 # Anime sites player checker
 domain:kalarona.org
+domain:tomion.org
 
 # Direct for checkers of MAX
 

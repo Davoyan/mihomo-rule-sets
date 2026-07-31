@@ -94,5 +94,5 @@ jobs:
           git config user.email "noreply@github.com"
           git add ip-for-ru/lists/*
           git commit -m "Update IP for RU lists" || echo "No changes"
-          git pull --rebase
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" "HEAD:${GITHUB_REF_NAME}"

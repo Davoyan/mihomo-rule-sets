@@ -67,6 +67,7 @@ payload:
     - +.atomyze.tech
     - +.attachmy.com
     - +.autobahn.db.com
+    - +.autoru.me
     - +.aviasales.com
     - +.avito.st
     - +.avs.io
@@ -110,10 +111,12 @@ payload:
     - +.checkip.amazonaws.com
     - +.chipcore.com
     - +.chizhik.club
+    - +.cian.site
     - +.ciciq.net
     - +.cloudpayments.world
     - +.cloudru.cn
     - +.clstorage.net
+    - +.cm.expert
     - +.coloradogrowers.com
     - +.comss.club
     - +.comss.info
@@ -167,12 +170,14 @@ payload:
     - +.drweb.fr
     - +.drweb.kz
     - +.drweb.uz
+    - +.durovscode.com
     - +.eadaily.com
     - +.eadaily.info
     - +.eadaily.net
     - +.eadaily.org
     - +.eaptechka.online
     - +.edadeal.io
+    - +.edu22.info
     - +.eginvestments.net
     - +.eleksir.finance
     - +.eligens.cl
@@ -241,6 +246,7 @@ payload:
     - +.goicq.org
     - +.gorzdrav.org
     - +.goup.ai
+    - +.gramotei.online
     - +.granat.az
     - +.green-box-tv.com
     - +.greywallpass.com
@@ -317,7 +323,13 @@ payload:
     - +.it-territory.com
     - +.ivicdn.tv
     - +.ixbt.com
+    - +.ixbt.games
+    - +.ixbt.market
+    - +.ixbt.media
+    - +.ixbt.pro
+    - +.ixbt.shop
     - +.ixbt.site
+    - +.ixbt.video
     - +.jinrieluosi.cn
     - +.jivo.chat
     - +.jivochat.co.in
@@ -420,6 +432,7 @@ payload:
     - +.medtrum.eu
     - +.megafon.com
     - +.megamarket.tech
+    - +.mel.fm
     - +.memealerts.com
     - +.meteofor.com
     - +.meteofor.st
@@ -466,6 +479,7 @@ payload:
     - +.netcraze.link
     - +.netcraze.pro
     - +.netmonet.co
+    - +.netschool.website
     - +.ngenix.net
     - +.noda.finance
     - +.noticias-rt.com
@@ -484,6 +498,7 @@ payload:
     - +.okkoapi.tv
     - +.okl.lt
     - +.okolo.app
+    - +.opennet.dev
     - +.oskelly.co
     - +.ostin.com
     - +.ozon.com
@@ -511,6 +526,7 @@ payload:
     - +.polza.ai
     - +.popmechanic.io
     - +.posl-t.org
+    - +.poudobnee.com
     - +.premier.one
     - +.premiumlive.site
     - +.priovtb.com
@@ -649,6 +665,7 @@ payload:
     - +.sberpravo.tech
     - +.sbruss.store
     - +.scb.im
+    - +.seclab.lat
     - +.securetpayment.com
     - +.selcdn.net
     - +.selectel.academy
@@ -714,6 +731,7 @@ payload:
     - +.t-tps.org
     - +.t.finance
     - +.t1.cloud
+    - +.tak-pravilno.com
     - +.tamtam.chat
     - +.tarantool.io
     - +.targetads.io
@@ -835,6 +853,7 @@ payload:
     - +.vkuservideo.net
     - +.vkworkspace.kz
     - +.vmailru.net
+    - +.volganet.net
     - +.vozvratnalogov.online
     - +.vscale.blog
     - +.vscale.io
@@ -971,9 +990,11 @@ payload:
     - +.yango.taxi
     - +.yango.tech
     - +.yangofellowship.com
+    - +.yaplakal.com
     - +.yastat.net
     - +.yastatic.net
     - +.yclients.com
+    - +.yndx.net
     - +.youla.io
     - +.yourgood.app
     - +.za-group.net

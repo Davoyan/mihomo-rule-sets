@@ -6,6 +6,7 @@ from pathlib import Path
 
 IPINFO_CSV = "ipinfo_lite.csv"
 MAXMIND_MMDB = "maxmind.mmdb"
+GEOFEED_GLOB = "geofeeds/*.csv"
 
 WANTED = {"RU", "BY"}
 
@@ -24,7 +25,7 @@ FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "majordom
                "miranda-media.ru", "realnet.ru", "d-group.online", "mageal.ru", "m3x.org", "liveproxy.ru", "meshnet.su", "mytrinet.ru",
                "bestline.su", "tkmotel.ru", "skymaxsib.ru", "crimea.com", "sevstar.net", "sevtelecom.ru", "ubsnet.ru", "komfort21vek.ru", "avanta-telecom.ru", "reconn.ru"
                "airee.ru", "rusety.ru", "1city.org", "naukanet.ru", "ekma.is", "ekma-is.ru", "ugletele.com", "lds.online", "evpanet.com", "maximusnet.ru", "my-trinity.com",
-               "antiddos.solutions", "miran.ru", "spd-mgts.ru", "volnamobile.ru", "yaltanet.ru",]
+               "antiddos.solutions", "miran.ru", "spd-mgts.ru", "volnamobile.ru", "yaltanet.ru", "onlinedn.ru",]
 
 WANTED_AS = [
     # VK AND MAILRU
@@ -409,6 +410,14 @@ def iso_from_maxmind(record: dict) -> str | None:
     return None
 
 
+def iso_from_geofeed(row: list[str]) -> str | None:
+    # RFC 8805: prefix,country,region,city,postal
+    if len(row) < 2:
+        return None
+    iso = row[1].strip().upper()
+    return iso or None
+
+
 def ipinfo_matches(row: dict) -> bool:
     if (row.get("country_code") or "").casefold() in {x.casefold() for x in WANTED}:
         return True
@@ -464,6 +473,8 @@ def main() -> None:
             else:
                 raise ValueError(f"Unknown IP version: {net.version}")
 
+    ipinfo_count = len(v4) + len(v6)
+
     # MaxMind MMDB
     mmdb_path = base / MAXMIND_MMDB
     if not mmdb_path.exists():
@@ -481,6 +492,41 @@ def main() -> None:
                 v6.append(net)
             else:
                 raise ValueError(f"Unknown IP version: {net.version}")
+
+    maxmind_count = len(v4) + len(v6) - ipinfo_count
+
+    # Geofeed CSVs
+    geofeed_paths = sorted(base.glob(GEOFEED_GLOB))
+    if not geofeed_paths:
+        raise FileNotFoundError(f"No files matched: {base / GEOFEED_GLOB}")
+
+    geofeed_counts: dict[str, int] = {}
+
+    for geofeed_path in geofeed_paths:
+        before = len(v4) + len(v6)
+
+        with geofeed_path.open("r", encoding="utf-8", newline="") as f:
+            r = csv.reader(f)
+            for row in r:
+                if not row or row[0].lstrip().startswith("#"):
+                    continue
+
+                if iso_from_geofeed(row) not in WANTED:
+                    continue
+
+                try:
+                    net = ipaddress.ip_network(row[0].strip(), strict=False)
+                except ValueError:
+                    continue
+
+                if net.version == 4:
+                    v4.append(net)
+                elif net.version == 6:
+                    v6.append(net)
+                else:
+                    raise ValueError(f"Unknown IP version: {net.version}")
+
+        geofeed_counts[geofeed_path.name] = len(v4) + len(v6) - before
 
     v4 = list(ipaddress.collapse_addresses(v4))
     v6 = list(ipaddress.collapse_addresses(v6))
@@ -538,6 +584,10 @@ def main() -> None:
         for net in all_nets:
             f.write(f"    - {net}\n")
 
+    print(f"IPinfo: {ipinfo_count}")
+    print(f"MaxMind: {maxmind_count}")
+    for name, count in geofeed_counts.items():
+        print(f"{name}: {count}")
     print(f"IPv4: {len(v4)}")
     print(f"IPv6: {len(v6)}")
     print(f"Total: {len(all_nets)}")

@@ -11,6 +11,9 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      CURL_OPTS: -fsSL --retry 3 --retry-delay 2 --retry-connrefused
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -33,10 +36,10 @@ jobs:
 
       - name: Install mihomo
         run: |
-          M_VER=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
+          M_VER=$(curl $CURL_OPTS https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
                   grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
           echo "Latest mihomo version: $M_VER"
-          wget -O mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz
+          curl $CURL_OPTS -o mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz
           gunzip -f mihomo.gz
           chmod +x mihomo
           sudo mv mihomo /usr/local/bin/

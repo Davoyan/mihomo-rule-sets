@@ -37,15 +37,15 @@
 ---
 ## Список IP адресов для маршрутизации внутри России.
 
-Список ip подсетей, сгенерированный из баз [IPinfo](https://ipinfo.io/data) + [MaxMind](https://github.com/P3TERX/GeoLite.mmdb/).
+Список ip подсетей, сгенерированный из баз [IPinfo](https://ipinfo.io/data) + [MaxMind](https://github.com/P3TERX/GeoLite.mmdb/), а также из геофидов [geofeed-sources.txt](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/geofeed-sources.txt).
 А так же из AS российских компаний, операторов или компаний связанных с Россией. Обновляется раз в сутки.
 
 Из чего формируется:
 
-* В одной из двух баз страна подсети 🇷🇺 RU или 🇧🇾 BY.
-* В названии AS в базе ipinfo есть [следующие ключевые слова](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L12), регистронезависимо
-* В домене AS в базе ipinfo есть [следующие ключевые слова](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L16), регистронезависимо
-* Домен AS в базе ipinfo полностью совпадает с значением из [списка](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L18), регистронезависимо
+* В одной из баз или в геофиде страна подсети 🇷🇺 RU или 🇧🇾 BY.
+* В названии AS в базе ipinfo есть [следующие ключевые слова](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L13), регистронезависимо
+* В домене AS в базе ipinfo есть [следующие ключевые слова](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L18), регистронезависимо
+* Домен AS в базе ipinfo полностью совпадает с значением из [списка](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/generate.py#L20), регистронезависимо
 
 Подсети собираются и агрегируются, уменьшая конечный вес до ~1мб / ~40к строк. Что решает проблему с недостатком оперативной памяти на ios.
 

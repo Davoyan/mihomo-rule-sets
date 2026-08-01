@@ -11,6 +11,9 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      CURL_OPTS: -fsSL --retry 3 --retry-delay 2 --retry-connrefused
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -25,15 +28,17 @@ jobs:
       - name: Install dependencies
         run:  |
           sudo apt update
-          sudo apt install -y curl wget git jq
-          bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+          sudo apt install -y curl git jq
+          bash <(curl $CURL_OPTS https://sing-box.app/deb-install.sh)
           pip install maxminddb
 
       - name: Download IPinfo Lite CSV
         env:
           IPINFO_TOKEN: ${{ secrets.IPINFO_TOKEN }}
         run: |
-          curl -L "https://ipinfo.io/data/ipinfo_lite.csv.gz?token=${IPINFO_TOKEN}" -o ip-for-ru/ipinfo_lite.csv.gz
+          curl $CURL_OPTS \
+            "https://ipinfo.io/data/ipinfo_lite.csv.gz?token=${IPINFO_TOKEN}" \
+            -o ip-for-ru/ipinfo_lite.csv.gz
           gunzip -f ip-for-ru/ipinfo_lite.csv.gz
 
       - name: Download MaxMind MMDB
@@ -46,7 +51,8 @@ jobs:
           mkdir -p ip-for-ru
           workdir="$(mktemp -d)"
       
-          curl -fsSL -u "$MAXMIND_ACCOUNT_ID:$MAXMIND_LICENSE_KEY" \
+          curl $CURL_OPTS \
+            -u "$MAXMIND_ACCOUNT_ID:$MAXMIND_LICENSE_KEY" \
             "https://download.maxmind.com/geoip/databases/GeoLite2-Country/download?suffix=tar.gz" \
             -o "$workdir/GeoLite2-Country.tar.gz"
       
@@ -61,6 +67,35 @@ jobs:
       
           cp "$mmdb_file" ip-for-ru/maxmind.mmdb
 
+      - name: Download Geofeed CSVs
+        run: |
+          set -euo pipefail
+
+          mkdir -p ip-for-ru/geofeeds
+          rm -f ip-for-ru/geofeeds/*.csv
+
+          while IFS= read -r line || [ -n "$line" ]; do
+            url="$(printf '%s' "$line" | tr -d '[:space:]')"
+
+            case "$url" in
+              ''|'#'*) continue ;;
+            esac
+
+            host="$(printf '%s' "$url" | sed -E 's#^[a-z]+://##; s#/.*##')"
+            out="ip-for-ru/geofeeds/${host}.csv"
+
+            n=2
+            while [ -e "$out" ]; do
+              out="ip-for-ru/geofeeds/${host}_${n}.csv"
+              n=$((n + 1))
+            done
+
+            echo "$url -> $out"
+            curl $CURL_OPTS "$url" -o "$out"
+          done < ip-for-ru/geofeed-sources.txt
+
+          ls -l ip-for-ru/geofeeds
+
       - name: Generate ip lists
         run: |
           mkdir -p ip-for-ru/lists
@@ -68,9 +103,10 @@ jobs:
 
       - name: Install mihomo
         run: |
-          M_VER=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
+          M_VER=$(curl $CURL_OPTS \
+            https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | \
             grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
-          wget -O mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz"
+          curl $CURL_OPTS -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${M_VER}/mihomo-linux-amd64-v${M_VER}.gz"
           gunzip -f mihomo.gz
           chmod +x mihomo
           sudo mv mihomo /usr/local/bin/mihomo

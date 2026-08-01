@@ -2,6 +2,7 @@ import ipaddress
 import json
 import csv
 import maxminddb
+from collections import Counter
 from pathlib import Path
 
 IPINFO_CSV = "ipinfo_lite.csv"
@@ -18,12 +19,12 @@ KEYWORDS_AS = ["yandex", "kaspersky", "VKontakte", "LLC VK", "Rostelecom", "GRCH
 KEYWORDS_DOMAIN = ["yandex", "kaspersky", "beeline", "stormwall", "edgecenter", "ngenix", "servicepipe", "rutube"]
 
 FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "majordomo.ru", "megafon.ru", "beeline.ru", "corbina.net", "mts.ru", "net.ru",
-               "t2.ru", "rt.ru", "rostelecom.ru", "rtcomm.ru", "ertelecom.ru", "curator.pro", "nic.ru", "nichost.ru", "edgecenter.ru", "ddos-guard.net", "kaspersky.com", "drweb.com", "drweb.ru", "avito.ru"
-               "sputnik.ru", "ok.ru", "rambler.ru", "ozon.ru", "reg.ru", "tinkoff.ru", "tbank.ru", "vk.com", "vk.ru", "vkontakte.ru", "vk.company", "cdnvideo.com", "cdnvideo.ru"
+               "t2.ru", "rt.ru", "rostelecom.ru", "rtcomm.ru", "ertelecom.ru", "curator.pro", "nic.ru", "nichost.ru", "edgecenter.ru", "ddos-guard.net", "kaspersky.com", "drweb.com", "drweb.ru", "avito.ru",
+               "sputnik.ru", "ok.ru", "rambler.ru", "ozon.ru", "reg.ru", "tinkoff.ru", "tbank.ru", "vk.com", "vk.ru", "vkontakte.ru", "vk.company", "cdnvideo.com", "cdnvideo.ru",
                "vtb.ru", "vtb.com", "vtb.ge", "vtb-bank.by", "vtb.am", "rshb.ru", "cft.ru", "variti.io", "koronapay.com", "mid.ru", "gov.ru", "rfc-cfa.ru", "farline.net",
                "donsattv.ru", "mobile-win.ru", "crelcom.ru", "xn--80ahgneri.net", "crimea-com.net", "crimea-com.ru", "ardinvest.net", "redi.su",
                "miranda-media.ru", "realnet.ru", "d-group.online", "mageal.ru", "m3x.org", "liveproxy.ru", "meshnet.su", "mytrinet.ru",
-               "bestline.su", "tkmotel.ru", "skymaxsib.ru", "crimea.com", "sevstar.net", "sevtelecom.ru", "ubsnet.ru", "komfort21vek.ru", "avanta-telecom.ru", "reconn.ru"
+               "bestline.su", "tkmotel.ru", "skymaxsib.ru", "crimea.com", "sevstar.net", "sevtelecom.ru", "ubsnet.ru", "komfort21vek.ru", "avanta-telecom.ru", "reconn.ru",
                "airee.ru", "rusety.ru", "1city.org", "naukanet.ru", "ekma.is", "ekma-is.ru", "ugletele.com", "lds.online", "evpanet.com", "maximusnet.ru", "my-trinity.com",
                "antiddos.solutions", "miran.ru", "spd-mgts.ru", "volnamobile.ru", "yaltanet.ru", "onlinedn.ru", "novotelecom.ru",]
 
@@ -399,6 +400,16 @@ WANTED_AS = [
 ]
 
 
+SOURCE_IPINFO = "IPINFO"
+SOURCE_MAXMIND = "MAXMIND"
+GEOFEED_PREFIX = "GEOFEED:"
+
+_WANTED_AS_CF = {asn.casefold(): asn for asn in WANTED_AS}
+_KEYWORDS_AS_CF = [(kw, kw.casefold()) for kw in KEYWORDS_AS]
+_KEYWORDS_DOMAIN_CF = [(kw, kw.casefold()) for kw in KEYWORDS_DOMAIN]
+_FULL_DOMAIN_CF = {kw.casefold(): kw for kw in FULL_DOMAIN}
+
+
 def iso_from_maxmind(record: dict) -> str | None:
     if not isinstance(record, dict):
         return None
@@ -418,47 +429,126 @@ def iso_from_geofeed(row: list[str]) -> str | None:
     return iso or None
 
 
-def ipinfo_matches(row: dict) -> bool:
-    if (row.get("country_code") or "").casefold() in {x.casefold() for x in WANTED}:
-        return True
+def ipinfo_rules(row: dict) -> list[str]:
+    rules: list[str] = []
 
-    row_asn = (row.get("asn") or "").casefold()
-    if row_asn and row_asn in (x.casefold() for x in WANTED_AS):
-        return True
+    country = (row.get("country_code") or "").strip().upper()
+    if country in WANTED:
+        rules.append(f"{{{country}}}")
+
+    asn = _WANTED_AS_CF.get((row.get("asn") or "").strip().casefold())
+    if asn:
+        rules.append(asn)
 
     as_name = (row.get("as_name") or "").casefold()
-    as_domain = (row.get("as_domain") or "").casefold()
+    for kw, kw_cf in _KEYWORDS_AS_CF:
+        if kw_cf in as_name:
+            rules.append(f"AS-NAME:{kw}")
 
-    for kw in KEYWORDS_AS:
-        if kw.casefold() in as_name:
-            return True
+    as_domain = (row.get("as_domain") or "").strip().casefold()
+    for kw, kw_cf in _KEYWORDS_DOMAIN_CF:
+        if kw_cf in as_domain:
+            rules.append(f"AS-DOMAIN:{kw}")
 
-    for kw in KEYWORDS_DOMAIN:
-        if kw.casefold() in as_domain:
-            return True
+    full_domain = _FULL_DOMAIN_CF.get(as_domain)
+    if full_domain:
+        rules.append(f"DOMAIN-FULL:{full_domain}")
 
-    for kw in FULL_DOMAIN:
-        if kw.casefold() == as_domain:
-            return True
+    return rules
 
-    return False
+
+def rule_sort_key(rule: str) -> tuple[int, str]:
+    if rule.startswith("{"):
+        return (0, rule)
+    if rule.startswith("AS-NAME:"):
+        return (2, rule)
+    if rule.startswith("AS-DOMAIN:"):
+        return (3, rule)
+    if rule.startswith("DOMAIN-FULL:"):
+        return (4, rule)
+    return (1, rule)
+
+
+def source_sort_key(source: str) -> tuple[int, str]:
+    if source == SOURCE_IPINFO:
+        return (0, "")
+    if source == SOURCE_MAXMIND:
+        return (1, "")
+    return (2, source)
+
+
+def format_reasons(reasons: set[tuple[str, str]]) -> str:
+    by_source: dict[str, set[str]] = {}
+    for source, rule in reasons:
+        by_source.setdefault(source, set()).add(rule)
+
+    return "; ".join(
+        f"{source} {', '.join(sorted(by_source[source], key=rule_sort_key))}"
+        for source in sorted(by_source, key=source_sort_key)
+    )
+
+
+def record(store: dict, net, source: str, rules: list[str], rule_counts: Counter) -> None:
+    reasons = store.setdefault(net, set())
+    for rule in rules:
+        reasons.add((source, rule))
+        rule_counts[(source, rule)] += 1
+
+
+def attribute(store: dict, collapsed: list) -> list[set[tuple[str, str]]]:
+    reasons: list[set[tuple[str, str]]] = [set() for _ in collapsed]
+
+    i = 0
+    for net in sorted(store):
+        while i < len(collapsed) and collapsed[i].broadcast_address < net.network_address:
+            i += 1
+        if i == len(collapsed):
+            break
+        reasons[i] |= store[net]
+
+    return reasons
+
+
+def render_section(title: str, rows: list[tuple[str, int]]) -> list[str]:
+    lines = [f"## {title}"]
+
+    if rows:
+        width = max(len(name) for name, _ in rows)
+        for name, count in sorted(rows, key=lambda item: (-item[1], item[0])):
+            lines.append(f"{name.ljust(width)}  {count}")
+    else:
+        lines.append("(none)")
+
+    lines.append("")
+    return lines
 
 
 def main() -> None:
     base = Path(__file__).resolve().parent
 
-    v4: list[ipaddress.IPv4Network] = []
-    v6: list[ipaddress.IPv6Network] = []
+    v4: dict[ipaddress.IPv4Network, set[tuple[str, str]]] = {}
+    v6: dict[ipaddress.IPv6Network, set[tuple[str, str]]] = {}
+    rule_counts: Counter[tuple[str, str]] = Counter()
+
+    def store_for(net):
+        if net.version == 4:
+            return v4
+        if net.version == 6:
+            return v6
+        raise ValueError(f"Unknown IP version: {net.version}")
 
     # IPinfo CSV
     ipinfo_path = base / IPINFO_CSV
     if not ipinfo_path.exists():
         raise FileNotFoundError(f"File not found: {ipinfo_path}")
 
+    ipinfo_count = 0
+
     with ipinfo_path.open("r", encoding="utf-8", newline="") as f:
         r = csv.DictReader(f)
         for row in r:
-            if not ipinfo_matches(row):
+            rules = ipinfo_rules(row)
+            if not rules:
                 continue
 
             net_s = row.get("network")
@@ -466,34 +556,25 @@ def main() -> None:
                 continue
 
             net = ipaddress.ip_network(net_s, strict=False)
-            if net.version == 4:
-                v4.append(net)
-            elif net.version == 6:
-                v6.append(net)
-            else:
-                raise ValueError(f"Unknown IP version: {net.version}")
-
-    ipinfo_count = len(v4) + len(v6)
+            record(store_for(net), net, SOURCE_IPINFO, rules, rule_counts)
+            ipinfo_count += 1
 
     # MaxMind MMDB
     mmdb_path = base / MAXMIND_MMDB
     if not mmdb_path.exists():
         raise FileNotFoundError(f"File not found: {mmdb_path}")
 
+    maxmind_count = 0
+
     with maxminddb.open_database(str(mmdb_path)) as reader:
-        for network, record in reader:
-            if iso_from_maxmind(record) not in WANTED:
+        for network, mm_record in reader:
+            iso = iso_from_maxmind(mm_record)
+            if iso not in WANTED:
                 continue
 
             net = ipaddress.ip_network(network, strict=False)
-            if net.version == 4:
-                v4.append(net)
-            elif net.version == 6:
-                v6.append(net)
-            else:
-                raise ValueError(f"Unknown IP version: {net.version}")
-
-    maxmind_count = len(v4) + len(v6) - ipinfo_count
+            record(store_for(net), net, SOURCE_MAXMIND, [f"{{{iso}}}"], rule_counts)
+            maxmind_count += 1
 
     # Geofeed CSVs
     geofeed_paths = sorted(base.glob(GEOFEED_GLOB))
@@ -503,7 +584,8 @@ def main() -> None:
     geofeed_counts: dict[str, int] = {}
 
     for geofeed_path in geofeed_paths:
-        before = len(v4) + len(v6)
+        source = f"{GEOFEED_PREFIX}{geofeed_path.stem}"
+        count = 0
 
         with geofeed_path.open("r", encoding="utf-8", newline="") as f:
             r = csv.reader(f)
@@ -511,7 +593,8 @@ def main() -> None:
                 if not row or row[0].lstrip().startswith("#"):
                     continue
 
-                if iso_from_geofeed(row) not in WANTED:
+                iso = iso_from_geofeed(row)
+                if iso not in WANTED:
                     continue
 
                 try:
@@ -519,20 +602,17 @@ def main() -> None:
                 except ValueError:
                     continue
 
-                if net.version == 4:
-                    v4.append(net)
-                elif net.version == 6:
-                    v6.append(net)
-                else:
-                    raise ValueError(f"Unknown IP version: {net.version}")
+                record(store_for(net), net, source, [f"{{{iso}}}"], rule_counts)
+                count += 1
 
-        geofeed_counts[geofeed_path.name] = len(v4) + len(v6) - before
+        geofeed_counts[geofeed_path.name] = count
 
-    v4 = list(ipaddress.collapse_addresses(v4))
-    v6 = list(ipaddress.collapse_addresses(v6))
+    v4_collapsed = list(ipaddress.collapse_addresses(v4))
+    v6_collapsed = list(ipaddress.collapse_addresses(v6))
 
-    all_nets = [*map(str, v4), *map(str, v6)]
-    
+    all_reasons = [*attribute(v4, v4_collapsed), *attribute(v6, v6_collapsed)]
+    all_nets = [*map(str, v4_collapsed), *map(str, v6_collapsed)]
+
     listsdir = base / "lists"
     
     # txt lst
@@ -584,12 +664,65 @@ def main() -> None:
         for net in all_nets:
             f.write(f"    - {net}\n")
 
+    annotated = [
+        f"{net} [{format_reasons(reasons)}]"
+        for net, reasons in zip(all_nets, all_reasons)
+    ]
+    (listsdir / "ips-for-ru-annotated.txt").write_text(
+        "\n".join(annotated) + ("\n" if annotated else ""),
+        encoding="utf-8",
+    )
+
+    countries = [f"{{{iso}}}" for iso in sorted(WANTED)]
+
+    sections: list[tuple[str, str, list[str]]] = [
+        (SOURCE_IPINFO, "IPINFO - country", countries),
+        (SOURCE_IPINFO, "IPINFO - AS (WANTED_AS)", list(WANTED_AS)),
+        (SOURCE_IPINFO, "IPINFO - AS name keywords (KEYWORDS_AS)",
+         [f"AS-NAME:{kw}" for kw in KEYWORDS_AS]),
+        (SOURCE_IPINFO, "IPINFO - AS domain keywords (KEYWORDS_DOMAIN)",
+         [f"AS-DOMAIN:{kw}" for kw in KEYWORDS_DOMAIN]),
+        (SOURCE_IPINFO, "IPINFO - full domains (FULL_DOMAIN)",
+         [f"DOMAIN-FULL:{kw}" for kw in FULL_DOMAIN]),
+        (SOURCE_MAXMIND, "MAXMIND - country", countries),
+    ]
+    for geofeed_path in geofeed_paths:
+        source = f"{GEOFEED_PREFIX}{geofeed_path.stem}"
+        sections.append((source, f"GEOFEED - {geofeed_path.stem}", countries))
+
+    rendered: list[str] = []
+    unused: list[tuple[str, int]] = []
+
+    for source, title, rules in sections:
+        rows = [(rule, rule_counts.get((source, rule), 0)) for rule in dict.fromkeys(rules)]
+        rendered += render_section(title, rows)
+        unused += [(f"{source} {rule}", 0) for rule, count in rows if count == 0]
+
+    stats: list[str] = [
+        "# IP for RU - rule statistics",
+        "# Subnet counts are pre-collapse: how many subnets each rule matched in its source.",
+        "",
+        "## Totals",
+        f"IPinfo matched subnets   {ipinfo_count}",
+        f"MaxMind matched subnets  {maxmind_count}",
+        f"Geofeed matched subnets  {sum(geofeed_counts.values())}",
+        f"Unique subnets           {len(v4) + len(v6)}",
+        f"Collapsed IPv4           {len(v4_collapsed)}",
+        f"Collapsed IPv6           {len(v6_collapsed)}",
+        f"Collapsed total          {len(all_nets)}",
+        "",
+    ]
+    stats += rendered
+    stats += render_section("Rules that matched nothing", unused)
+
+    (listsdir / "ips-for-ru-stats.txt").write_text("\n".join(stats) + "\n", encoding="utf-8")
+
     print(f"IPinfo: {ipinfo_count}")
     print(f"MaxMind: {maxmind_count}")
     for name, count in geofeed_counts.items():
         print(f"{name}: {count}")
-    print(f"IPv4: {len(v4)}")
-    print(f"IPv6: {len(v6)}")
+    print(f"IPv4: {len(v4_collapsed)}")
+    print(f"IPv6: {len(v6_collapsed)}")
     print(f"Total: {len(all_nets)}")
 
 

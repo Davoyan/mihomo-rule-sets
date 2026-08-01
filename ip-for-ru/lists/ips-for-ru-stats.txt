@@ -1,0 +1,539 @@
+# IP for RU - rule statistics
+# Subnet counts are pre-collapse: how many subnets each rule matched in its source.
+
+## Totals
+IPinfo matched subnets   69213
+MaxMind matched subnets  26155
+Geofeed matched subnets  2866
+Unique subnets           82383
+Collapsed IPv4           15240
+Collapsed IPv6           24856
+Collapsed total          40096
+
+## IPINFO - country
+{RU}  63245
+{BY}  2587
+
+## IPINFO - AS (WANTED_AS)
+AS12389   2222
+AS8359    1830
+AS3216    1457
+AS13238   665
+AS51115   612
+AS31133   609
+AS208398  404
+AS8402    321
+AS9049    245
+AS8732    243
+AS44534   221
+AS47764   220
+AS12714   200
+AS12332   171
+AS35154   153
+AS12683   144
+AS201706  141
+AS12695   110
+AS208677  96
+AS25159   94
+AS16345   92
+AS20632   87
+AS12772   86
+AS31163   75
+AS31363   71
+AS25490   64
+AS56981   55
+AS57073   53
+AS60476   53
+AS33934   50
+AS20597   45
+AS31195   44
+AS31208   43
+AS60490   42
+AS21353   40
+AS47541   39
+AS50512   38
+AS41733   37
+AS200350  35
+AS51570   32
+AS31261   30
+AS5563    30
+AS29648   29
+AS31205   29
+AS209024  27
+AS31213   27
+AS3253    27
+AS51604   26
+AS6854    26
+AS13118   25
+AS28884   25
+AS48176   25
+AS56420   25
+AS57378   25
+AS42610   24
+AS57044   24
+AS12768   23
+AS51645   23
+AS21483   22
+AS24588   22
+AS21378   21
+AS24810   21
+AS29194   20
+AS34584   20
+AS50498   20
+AS50543   20
+AS25515   19
+AS34137   19
+AS59467   19
+AS15582   18
+AS16301   18
+AS30922   18
+AS31224   18
+AS34974   18
+AS49048   18
+AS197068  17
+AS34205   17
+AS41691   17
+AS41822   17
+AS21332   16
+AS41682   16
+AS50544   16
+AS51035   16
+AS51819   16
+AS29190   15
+AS34168   15
+AS41754   15
+AS41843   15
+AS42548   15
+AS52207   15
+AS197023  14
+AS29125   14
+AS30881   14
+AS31359   14
+AS35177   14
+AS44895   14
+AS57026   14
+AS15640   13
+AS16256   13
+AS21479   13
+AS28709   13
+AS35125   13
+AS39435   13
+AS42682   13
+AS43314   13
+AS47395   13
+AS15468   12
+AS207304  12
+AS31483   12
+AS39028   12
+AS41661   12
+AS43478   12
+AS48612   12
+AS50542   12
+AS25531   11
+AS34590   11
+AS41727   11
+AS41786   11
+AS42087   11
+AS50928   11
+AS56330   11
+AS6863    11
+AS8580    11
+AS13174   10
+AS34150   10
+AS34533   10
+AS39001   10
+AS41134   10
+AS42110   10
+AS42116   10
+AS42362   10
+AS59713   10
+AS8570    10
+AS13056   9
+AS29456   9
+AS34038   9
+AS35237   9
+AS39811   9
+AS41403   9
+AS42683   9
+AS13155   8
+AS210656  8
+AS41209   8
+AS48858   8
+AS13055   7
+AS208795  7
+AS215013  7
+AS24699   7
+AS34747   7
+AS42322   7
+AS43132   7
+AS44677   7
+AS56377   7
+AS8345    7
+AS15934   6
+AS20807   6
+AS20866   6
+AS20919   6
+AS21017   6
+AS21051   6
+AS21365   6
+AS21487   6
+AS25446   6
+AS34892   6
+AS35298   6
+AS35728   6
+AS39858   6
+AS43038   6
+AS44736   6
+AS48123   6
+AS49154   6
+AS50071   6
+AS61280   6
+AS62222   6
+AS8331    6
+AS8371    6
+AS8568    6
+AS12730   5
+AS13075   5
+AS201817  5
+AS21480   5
+AS24783   5
+AS24866   5
+AS29069   5
+AS34267   5
+AS34552   5
+AS38951   5
+AS40993   5
+AS41929   5
+AS43148   5
+AS49350   5
+AS51034   5
+AS61178   5
+AS8752    5
+AS201512  4
+AS20533   4
+AS206661  4
+AS31558   4
+AS34894   4
+AS39799   4
+AS43097   4
+AS43720   4
+AS47542   4
+AS48000   4
+AS48212   4
+AS48322   4
+AS48541   4
+AS57973   4
+AS59494   4
+AS60891   4
+AS8773    4
+AS12380   3
+AS12543   3
+AS13257   3
+AS16300   3
+AS201012  3
+AS201513  3
+AS202611  3
+AS206673  3
+AS207986  3
+AS211517  3
+AS215070  3
+AS25436   3
+AS34351   3
+AS41771   3
+AS42842   3
+AS43574   3
+AS43797   3
+AS44467   3
+AS44704   3
+AS44923   3
+AS48124   3
+AS49988   3
+AS12846   2
+AS16043   2
+AS205830  2
+AS205971  2
+AS207207  2
+AS207581  2
+AS208117  2
+AS209701  2
+AS210109  2
+AS212066  2
+AS24789   2
+AS24873   2
+AS25408   2
+AS2766    2
+AS28860   2
+AS31425   2
+AS35473   2
+AS39407   2
+AS41190   2
+AS41853   2
+AS42358   2
+AS43275   2
+AS44096   2
+AS44731   2
+AS47111   2
+AS48421   2
+AS48796   2
+AS49281   2
+AS49816   2
+AS49874   2
+AS51771   2
+AS8263    2
+AS12690   1
+AS13094   1
+AS13095   1
+AS15759   1
+AS16012   1
+AS196641  1
+AS196747  1
+AS197140  1
+AS202804  1
+AS203502  1
+AS204354  1
+AS204952  1
+AS205158  1
+AS205161  1
+AS20702   1
+AS207970  1
+AS208165  1
+AS208722  1
+AS211631  1
+AS213105  1
+AS213853  1
+AS2599    1
+AS28703   1
+AS29209   1
+AS31484   1
+AS31496   1
+AS3235    1
+AS34644   1
+AS34925   1
+AS35516   1
+AS39229   1
+AS41002   1
+AS42245   1
+AS42628   1
+AS42974   1
+AS43318   1
+AS43396   1
+AS43687   1
+AS43970   1
+AS44408   1
+AS44412   1
+AS45000   1
+AS47457   1
+AS47899   1
+AS47911   1
+AS48044   1
+AS48100   1
+AS49053   1
+AS49144   1
+AS49665   1
+AS50240   1
+AS51011   1
+AS57107   1
+AS57681   1
+AS58100   1
+AS60122   1
+AS60863   1
+AS62170   1
+AS62243   1
+AS62287   1
+AS6828    1
+AS8350    1
+AS8382    1
+AS8443    1
+AS8557    1
+AS8675    1
+AS8755    1
+AS8828    1
+AS9068    1
+AS12396   0
+AS12685   0
+AS198295  0
+AS199295  0
+AS21447   0
+AS30749   0
+AS33844   0
+AS42091   0
+AS42115   0
+AS5573    0
+AS58112   0
+AS62423   0
+AS6850    0
+
+## IPINFO - AS name keywords (KEYWORDS_AS)
+AS-NAME:Rostelecom                       2892
+AS-NAME:Vimpelcom                        2069
+AS-NAME:yandex                           941
+AS-NAME:LLC VK                           290
+AS-NAME:SERVICEPIPE                      141
+AS-NAME:kaspersky                        134
+AS-NAME:JSC IOT                          110
+AS-NAME:DDOS-GUARD                       92
+AS-NAME:EdgeCenter LLC                   89
+AS-NAME:ru-center                        85
+AS-NAME:Nauka-Svyaz                      84
+AS-NAME:Moscow city telephone network    53
+AS-NAME:CDNvideo                         48
+AS-NAME:Sovremennye setevye tekhnologii  43
+AS-NAME:Sberbank                         29
+AS-NAME:EdgeAm                           14
+AS-NAME:Alfa-Bank                        10
+AS-NAME:Ruform LLC                       9
+AS-NAME:GRCHC                            7
+AS-NAME:Sovkombank                       5
+AS-NAME:ALEF-BANK                        2
+AS-NAME:Russian Agricultural Bank        2
+AS-NAME:VKontakte                        0
+AS-NAME:ngenix                           0
+
+## IPINFO - AS domain keywords (KEYWORDS_DOMAIN)
+AS-DOMAIN:beeline      2096
+AS-DOMAIN:yandex       340
+AS-DOMAIN:servicepipe  141
+AS-DOMAIN:kaspersky    134
+AS-DOMAIN:stormwall    103
+AS-DOMAIN:edgecenter   89
+AS-DOMAIN:ngenix       43
+AS-DOMAIN:rutube       9
+
+## IPINFO - full domains (FULL_DOMAIN)
+DOMAIN-FULL:rt.ru               2362
+DOMAIN-FULL:mts.ru              2272
+DOMAIN-FULL:beeline.ru          1765
+DOMAIN-FULL:megafon.ru          1107
+DOMAIN-FULL:ertelecom.ru        1081
+DOMAIN-FULL:ya.ru               675
+DOMAIN-FULL:curator.pro         648
+DOMAIN-FULL:komfort21vek.ru     464
+DOMAIN-FULL:rostelecom.ru       412
+DOMAIN-FULL:miranda-media.ru    342
+DOMAIN-FULL:corbina.net         321
+DOMAIN-FULL:crelcom.ru          294
+DOMAIN-FULL:yandex.net          238
+DOMAIN-FULL:lds.online          237
+DOMAIN-FULL:vk.company          220
+DOMAIN-FULL:rtcomm.ru           203
+DOMAIN-FULL:reg.ru              162
+DOMAIN-FULL:reconn.ru           138
+DOMAIN-FULL:kaspersky.com       134
+DOMAIN-FULL:cdnvideo.com        129
+DOMAIN-FULL:cloud.ru            96
+DOMAIN-FULL:ddos-guard.net      92
+DOMAIN-FULL:crimea-com.net      91
+DOMAIN-FULL:mobile-win.ru       91
+DOMAIN-FULL:edgecenter.ru       89
+DOMAIN-FULL:rusety.ru           89
+DOMAIN-FULL:naukanet.ru         84
+DOMAIN-FULL:redi.su             82
+DOMAIN-FULL:my-trinity.com      79
+DOMAIN-FULL:realnet.ru          65
+DOMAIN-FULL:m3x.org             60
+DOMAIN-FULL:vk.com              59
+DOMAIN-FULL:spd-mgts.ru         53
+DOMAIN-FULL:t2.ru               38
+DOMAIN-FULL:net.ru              35
+DOMAIN-FULL:ugletele.com        35
+DOMAIN-FULL:farline.net         34
+DOMAIN-FULL:rambler.ru          32
+DOMAIN-FULL:nichost.ru          31
+DOMAIN-FULL:antiddos.solutions  29
+DOMAIN-FULL:variti.io           29
+DOMAIN-FULL:d-group.online      27
+DOMAIN-FULL:gov.ru              22
+DOMAIN-FULL:liveproxy.ru        20
+DOMAIN-FULL:onlinedn.ru         20
+DOMAIN-FULL:xn--80ahgneri.net   19
+DOMAIN-FULL:sevstar.net         16
+DOMAIN-FULL:donsattv.ru         15
+DOMAIN-FULL:meshnet.su          15
+DOMAIN-FULL:mageal.ru           13
+DOMAIN-FULL:mytrinet.ru         13
+DOMAIN-FULL:tbank.ru            13
+DOMAIN-FULL:miran.ru            12
+DOMAIN-FULL:novotelecom.ru      10
+DOMAIN-FULL:avanta-telecom.ru   9
+DOMAIN-FULL:vtb.ru              9
+DOMAIN-FULL:ardinvest.net       8
+DOMAIN-FULL:koronapay.com       8
+DOMAIN-FULL:ok.ru               8
+DOMAIN-FULL:ozon.ru             8
+DOMAIN-FULL:mail.ru             7
+DOMAIN-FULL:rfc-cfa.ru          7
+DOMAIN-FULL:tinkoff.ru          7
+DOMAIN-FULL:majordomo.ru        6
+DOMAIN-FULL:mid.ru              6
+DOMAIN-FULL:maximusnet.ru       5
+DOMAIN-FULL:sevtelecom.ru       5
+DOMAIN-FULL:volnamobile.ru      5
+DOMAIN-FULL:1city.org           4
+DOMAIN-FULL:cft.ru              4
+DOMAIN-FULL:evpanet.com         4
+DOMAIN-FULL:ubsnet.ru           4
+DOMAIN-FULL:yaltanet.ru         4
+DOMAIN-FULL:airee.ru            3
+DOMAIN-FULL:avito.ru            3
+DOMAIN-FULL:crimea.com          3
+DOMAIN-FULL:drweb.com           2
+DOMAIN-FULL:rshb.ru             2
+DOMAIN-FULL:skymaxsib.ru        2
+DOMAIN-FULL:bestline.su         1
+DOMAIN-FULL:ekma.is             1
+DOMAIN-FULL:sputnik.ru          1
+DOMAIN-FULL:tkmotel.ru          1
+DOMAIN-FULL:vtb-bank.by         1
+DOMAIN-FULL:vtb.am              1
+DOMAIN-FULL:vtb.com             1
+DOMAIN-FULL:vtb.ge              1
+DOMAIN-FULL:cdnvideo.ru         0
+DOMAIN-FULL:crimea-com.ru       0
+DOMAIN-FULL:drweb.ru            0
+DOMAIN-FULL:ekma-is.ru          0
+DOMAIN-FULL:nic.ru              0
+DOMAIN-FULL:vk.ru               0
+DOMAIN-FULL:vkontakte.ru        0
+
+## MAXMIND - country
+{RU}  25403
+{BY}  752
+
+## GEOFEED - geofeed.ipxo.com
+{RU}  20
+{BY}  4
+
+## GEOFEED - geofeed.selectel.ru
+{RU}  1895
+{BY}  0
+
+## GEOFEED - geofeed.timeweb.net
+{RU}  947
+{BY}  0
+
+## Rules that matched nothing
+GEOFEED:geofeed.selectel.ru {BY}  0
+GEOFEED:geofeed.timeweb.net {BY}  0
+IPINFO AS-NAME:VKontakte          0
+IPINFO AS-NAME:ngenix             0
+IPINFO AS12396                    0
+IPINFO AS12685                    0
+IPINFO AS198295                   0
+IPINFO AS199295                   0
+IPINFO AS21447                    0
+IPINFO AS30749                    0
+IPINFO AS33844                    0
+IPINFO AS42091                    0
+IPINFO AS42115                    0
+IPINFO AS5573                     0
+IPINFO AS58112                    0
+IPINFO AS62423                    0
+IPINFO AS6850                     0
+IPINFO DOMAIN-FULL:cdnvideo.ru    0
+IPINFO DOMAIN-FULL:crimea-com.ru  0
+IPINFO DOMAIN-FULL:drweb.ru       0
+IPINFO DOMAIN-FULL:ekma-is.ru     0
+IPINFO DOMAIN-FULL:nic.ru         0
+IPINFO DOMAIN-FULL:vk.ru          0
+IPINFO DOMAIN-FULL:vkontakte.ru   0
+

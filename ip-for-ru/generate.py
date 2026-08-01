@@ -2,7 +2,6 @@ import ipaddress
 import json
 import csv
 import maxminddb
-from collections import Counter
 from pathlib import Path
 
 IPINFO_CSV = "ipinfo_lite.csv"
@@ -429,23 +428,24 @@ def iso_from_geofeed(row: list[str]) -> str | None:
     return iso or None
 
 
-def ipinfo_rules(row: dict) -> list[str]:
+def country_rules(value: str) -> list[str]:
+    iso = value.strip().upper()
+    return [f"{{{iso}}}"] if iso in WANTED else []
+
+
+def ipinfo_as_rules(asn_value: str, as_name_value: str, as_domain_value: str) -> list[str]:
     rules: list[str] = []
 
-    country = (row.get("country_code") or "").strip().upper()
-    if country in WANTED:
-        rules.append(f"{{{country}}}")
-
-    asn = _WANTED_AS_CF.get((row.get("asn") or "").strip().casefold())
+    asn = _WANTED_AS_CF.get(asn_value.strip().casefold())
     if asn:
         rules.append(asn)
 
-    as_name = (row.get("as_name") or "").casefold()
+    as_name = as_name_value.casefold()
     for kw, kw_cf in _KEYWORDS_AS_CF:
         if kw_cf in as_name:
             rules.append(f"AS-NAME:{kw}")
 
-    as_domain = (row.get("as_domain") or "").strip().casefold()
+    as_domain = as_domain_value.strip().casefold()
     for kw, kw_cf in _KEYWORDS_DOMAIN_CF:
         if kw_cf in as_domain:
             rules.append(f"AS-DOMAIN:{kw}")
@@ -488,39 +488,29 @@ def format_reasons(reasons: set[tuple[str, str]]) -> str:
     )
 
 
-def record(store: dict, net, source: str, rules: list[str], rule_counts: Counter) -> None:
+def record(store: dict, net, source: str, rules: list[str]) -> None:
     reasons = store.setdefault(net, set())
     for rule in rules:
         reasons.add((source, rule))
-        rule_counts[(source, rule)] += 1
 
 
 def attribute(store: dict, collapsed: list) -> list[set[tuple[str, str]]]:
     reasons: list[set[tuple[str, str]]] = [set() for _ in collapsed]
+    bounds = [int(net.broadcast_address) for net in collapsed]
+    limit = len(bounds)
+
+    items = [(int(net.network_address), net) for net in store]
+    items.sort(key=lambda item: item[0])
 
     i = 0
-    for net in sorted(store):
-        while i < len(collapsed) and collapsed[i].broadcast_address < net.network_address:
+    for start, net in items:
+        while i < limit and bounds[i] < start:
             i += 1
-        if i == len(collapsed):
+        if i == limit:
             break
         reasons[i] |= store[net]
 
     return reasons
-
-
-def render_section(title: str, rows: list[tuple[str, int]]) -> list[str]:
-    lines = [f"## {title}"]
-
-    if rows:
-        width = max(len(name) for name, _ in rows)
-        for name, count in sorted(rows, key=lambda item: (-item[1], item[0])):
-            lines.append(f"{name.ljust(width)}  {count}")
-    else:
-        lines.append("(none)")
-
-    lines.append("")
-    return lines
 
 
 def main() -> None:
@@ -528,7 +518,6 @@ def main() -> None:
 
     v4: dict[ipaddress.IPv4Network, set[tuple[str, str]]] = {}
     v6: dict[ipaddress.IPv6Network, set[tuple[str, str]]] = {}
-    rule_counts: Counter[tuple[str, str]] = Counter()
 
     def store_for(net):
         if net.version == 4:
@@ -545,18 +534,39 @@ def main() -> None:
     ipinfo_count = 0
 
     with ipinfo_path.open("r", encoding="utf-8", newline="") as f:
-        r = csv.DictReader(f)
+        r = csv.reader(f)
+        header = next(r)
+        i_net = header.index("network")
+        i_country = header.index("country_code")
+        i_asn = header.index("asn")
+        i_as_name = header.index("as_name")
+        i_as_domain = header.index("as_domain")
+
+        country_cache: dict[str, list[str]] = {}
+        as_cache: dict[tuple[str, str, str], list[str]] = {}
+
         for row in r:
-            rules = ipinfo_rules(row)
-            if not rules:
+            country_value = row[i_country]
+            country = country_cache.get(country_value)
+            if country is None:
+                country = country_rules(country_value)
+                country_cache[country_value] = country
+
+            as_key = (row[i_asn], row[i_as_name], row[i_as_domain])
+            as_rules = as_cache.get(as_key)
+            if as_rules is None:
+                as_rules = ipinfo_as_rules(*as_key)
+                as_cache[as_key] = as_rules
+
+            if not country and not as_rules:
                 continue
 
-            net_s = row.get("network")
+            net_s = row[i_net]
             if not net_s:
                 continue
 
             net = ipaddress.ip_network(net_s, strict=False)
-            record(store_for(net), net, SOURCE_IPINFO, rules, rule_counts)
+            record(store_for(net), net, SOURCE_IPINFO, country + as_rules)
             ipinfo_count += 1
 
     # MaxMind MMDB
@@ -567,13 +577,12 @@ def main() -> None:
     maxmind_count = 0
 
     with maxminddb.open_database(str(mmdb_path)) as reader:
-        for network, mm_record in reader:
+        for net, mm_record in reader:
             iso = iso_from_maxmind(mm_record)
             if iso not in WANTED:
                 continue
 
-            net = ipaddress.ip_network(network, strict=False)
-            record(store_for(net), net, SOURCE_MAXMIND, [f"{{{iso}}}"], rule_counts)
+            record(store_for(net), net, SOURCE_MAXMIND, [f"{{{iso}}}"])
             maxmind_count += 1
 
     # Geofeed CSVs
@@ -602,7 +611,7 @@ def main() -> None:
                 except ValueError:
                     continue
 
-                record(store_for(net), net, source, [f"{{{iso}}}"], rule_counts)
+                record(store_for(net), net, source, [f"{{{iso}}}"])
                 count += 1
 
         geofeed_counts[geofeed_path.name] = count
@@ -668,54 +677,12 @@ def main() -> None:
         f"{net} [{format_reasons(reasons)}]"
         for net, reasons in zip(all_nets, all_reasons)
     ]
-    (listsdir / "ips-for-ru-annotated.txt").write_text(
+    annotateddir = base / "annotated"
+    annotateddir.mkdir(exist_ok=True)
+    (annotateddir / "ips-for-ru-annotated.txt").write_text(
         "\n".join(annotated) + ("\n" if annotated else ""),
         encoding="utf-8",
     )
-
-    countries = [f"{{{iso}}}" for iso in sorted(WANTED)]
-
-    sections: list[tuple[str, str, list[str]]] = [
-        (SOURCE_IPINFO, "IPINFO - country", countries),
-        (SOURCE_IPINFO, "IPINFO - AS (WANTED_AS)", list(WANTED_AS)),
-        (SOURCE_IPINFO, "IPINFO - AS name keywords (KEYWORDS_AS)",
-         [f"AS-NAME:{kw}" for kw in KEYWORDS_AS]),
-        (SOURCE_IPINFO, "IPINFO - AS domain keywords (KEYWORDS_DOMAIN)",
-         [f"AS-DOMAIN:{kw}" for kw in KEYWORDS_DOMAIN]),
-        (SOURCE_IPINFO, "IPINFO - full domains (FULL_DOMAIN)",
-         [f"DOMAIN-FULL:{kw}" for kw in FULL_DOMAIN]),
-        (SOURCE_MAXMIND, "MAXMIND - country", countries),
-    ]
-    for geofeed_path in geofeed_paths:
-        source = f"{GEOFEED_PREFIX}{geofeed_path.stem}"
-        sections.append((source, f"GEOFEED - {geofeed_path.stem}", countries))
-
-    rendered: list[str] = []
-    unused: list[tuple[str, int]] = []
-
-    for source, title, rules in sections:
-        rows = [(rule, rule_counts.get((source, rule), 0)) for rule in dict.fromkeys(rules)]
-        rendered += render_section(title, rows)
-        unused += [(f"{source} {rule}", 0) for rule, count in rows if count == 0]
-
-    stats: list[str] = [
-        "# IP for RU - rule statistics",
-        "# Subnet counts are pre-collapse: how many subnets each rule matched in its source.",
-        "",
-        "## Totals",
-        f"IPinfo matched subnets   {ipinfo_count}",
-        f"MaxMind matched subnets  {maxmind_count}",
-        f"Geofeed matched subnets  {sum(geofeed_counts.values())}",
-        f"Unique subnets           {len(v4) + len(v6)}",
-        f"Collapsed IPv4           {len(v4_collapsed)}",
-        f"Collapsed IPv6           {len(v6_collapsed)}",
-        f"Collapsed total          {len(all_nets)}",
-        "",
-    ]
-    stats += rendered
-    stats += render_section("Rules that matched nothing", unused)
-
-    (listsdir / "ips-for-ru-stats.txt").write_text("\n".join(stats) + "\n", encoding="utf-8")
 
     print(f"IPinfo: {ipinfo_count}")
     print(f"MaxMind: {maxmind_count}")

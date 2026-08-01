@@ -128,7 +128,7 @@ jobs:
         run: |
           git config user.name "IP for RU lists Generator"
           git config user.email "noreply@github.com"
-          git add ip-for-ru/lists/* ip-for-ru/annotated/*
+          git add -A ip-for-ru/lists ip-for-ru/annotated
           git commit -m "Update IP for RU lists" || echo "No changes"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" "HEAD:${GITHUB_REF_NAME}"

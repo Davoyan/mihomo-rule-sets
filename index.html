@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ips-for-ru — проверка IP</title>
+<style>
+  :root {
+    --bg: #fff;
+    --text: #1a1d21;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #2563eb;
+    --tag: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --text: #e8eaed;
+      --muted: #9aa1ac;
+      --line: #2a2f37;
+      --accent: #60a5fa;
+      --tag: #21262e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 20px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  form { display: flex; gap: 8px; }
+  input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 14px;
+    font-size: 16px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+  }
+  input:focus { border-color: var(--accent); }
+  button {
+    padding: 11px 20px;
+    font-size: 15px;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:disabled { opacity: .5; cursor: default; }
+  #out { margin-top: 32px; }
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 11px 0; border-top: 1px solid var(--line); vertical-align: baseline; }
+  th { width: 120px; font-weight: 400; color: var(--muted); }
+  td { overflow-wrap: anywhere; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .country { display: inline-flex; align-items: center; gap: 7px; margin-right: 16px; }
+  .country svg { display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.18); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    background: var(--tag);
+    border-radius: 5px;
+    padding: 3px 8px;
+  }
+  .empty { color: var(--muted); }
+  .muted { color: var(--muted); font-size: 13px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <form id="f">
+    <input id="q" type="text" placeholder="IP или подсеть" autocomplete="off" spellcheck="false">
+    <button id="go" disabled>Поиск</button>
+  </form>
+  <div id="out"></div>
+  <div class="muted" id="hint">Загрузка…</div>
+</div>
+
+<script>
+const DATA_URL = 'ip-for-ru/annotated/ips-for-ru-annotated.txt';
+
+const COUNTRIES = {
+  RU: ['Россия', '<svg width="22" height="15" viewBox="0 0 9 6"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039a6"/><rect y="4" width="9" height="2" fill="#d52b1e"/></svg>'],
+  BY: ['Беларусь', '<svg width="22" height="15" viewBox="0 0 9 6"><rect width="9" height="4" fill="#c8313e"/><rect y="4" width="9" height="2" fill="#4aa657"/><rect width="1.1" height="6" fill="#fff"/><g fill="#c8313e"><rect x=".35" y=".3" width=".4" height=".4"/><rect x=".35" y="1.3" width=".4" height=".4"/><rect x=".35" y="2.3" width=".4" height=".4"/><rect x=".35" y="3.3" width=".4" height=".4"/><rect x=".35" y="4.3" width=".4" height=".4"/><rect x=".35" y="5.3" width=".4" height=".4"/></g></svg>']
+};
+
+let v4 = null, v6 = null;
+
+function v4ToInt(s) {
+  const p = s.split('.');
+  if (p.length !== 4) return null;
+  let n = 0;
+  for (const x of p) {
+    if (!/^\d{1,3}$/.test(x)) return null;
+    const v = +x;
+    if (v > 255) return null;
+    n = n * 256 + v;
+  }
+  return n;
+}
+
+function v6ToHex(str) {
+  let s = str.trim().toLowerCase();
+  if (!s.includes(':')) return null;
+  const lastColon = s.lastIndexOf(':');
+  const tail = s.slice(lastColon + 1);
+  if (tail.includes('.')) {
+    const n = v4ToInt(tail);
+    if (n === null) return null;
+    s = s.slice(0, lastColon + 1) + Math.floor(n / 65536).toString(16) + ':' + (n % 65536).toString(16);
+  }
+  const parts = s.split('::');
+  if (parts.length > 2) return null;
+  const head = parts[0] ? parts[0].split(':') : [];
+  const back = parts.length === 2 ? (parts[1] ? parts[1].split(':') : []) : [];
+  let groups;
+  if (parts.length === 2) {
+    const total = head.length + back.length;
+    if (total > 7) return null;
+    groups = head.concat(new Array(8 - total).fill('0'), back);
+  } else {
+    if (head.length !== 8) return null;
+    groups = head;
+  }
+  let out = '';
+  for (const g of groups) {
+    if (!/^[0-9a-f]{1,4}$/.test(g)) return null;
+    out += g.padStart(4, '0');
+  }
+  return out.length === 32 ? out : null;
+}
+
+function v6End(hex, prefix) {
+  const full = prefix >> 2;
+  const rem = prefix & 3;
+  if (full >= 32) return hex;
+  let out = hex.slice(0, full);
+  out += rem ? (parseInt(hex[full], 16) | (0xf >> rem)).toString(16) : 'f';
+  return out.padEnd(32, 'f');
+}
+
+function v6Start(hex, prefix) {
+  const full = prefix >> 2;
+  const rem = prefix & 3;
+  if (full >= 32) return hex;
+  let out = hex.slice(0, full);
+  out += rem ? (parseInt(hex[full], 16) & ~(0xf >> rem) & 0xf).toString(16) : '0';
+  return out.padEnd(32, '0');
+}
+
+function parseData(text) {
+  const s4 = [], e4 = [], a4 = [], c4 = [];
+  const s6 = [], e6 = [], a6 = [], c6 = [];
+  let pos = 0;
+  const len = text.length;
+  while (pos < len) {
+    let nl = text.indexOf('\n', pos);
+    if (nl === -1) nl = len;
+    let line = text.slice(pos, nl);
+    pos = nl + 1;
+    if (line.charCodeAt(line.length - 1) === 13) line = line.slice(0, -1);
+    if (!line) continue;
+    const sp = line.indexOf(' ');
+    const open = line.indexOf('[', sp);
+    const close = line.lastIndexOf(']');
+    if (sp === -1 || open === -1 || close <= open) continue;
+    const cidr = line.slice(0, sp);
+    const ann = line.slice(open + 1, close);
+    const slash = cidr.lastIndexOf('/');
+    const addr = cidr.slice(0, slash);
+    const prefix = +cidr.slice(slash + 1);
+    if (addr.includes(':')) {
+      const hex = v6ToHex(addr);
+      if (hex === null) continue;
+      s6.push(hex); e6.push(v6End(hex, prefix)); a6.push(ann); c6.push(cidr);
+    } else {
+      const n = v4ToInt(addr);
+      if (n === null) continue;
+      s4.push(n); e4.push(n + Math.pow(2, 32 - prefix) - 1); a4.push(ann); c4.push(cidr);
+    }
+  }
+  v4 = { start: Float64Array.from(s4), end: Float64Array.from(e4), ann: a4, cidr: c4 };
+  v6 = { start: s6, end: e6, ann: a6, cidr: c6 };
+}
+
+function lookup(store, value) {
+  const start = store.start;
+  let lo = 0, hi = start.length - 1, found = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (start[mid] <= value) { found = mid; lo = mid + 1; }
+    else hi = mid - 1;
+  }
+  if (found === -1 || store.end[found] < value) return null;
+  return { cidr: store.cidr[found], ann: store.ann[found] };
+}
+
+function parseQuery(raw) {
+  const s = raw.trim();
+  if (!s) return null;
+  const slash = s.indexOf('/');
+  const addr = slash === -1 ? s : s.slice(0, slash);
+  const isV6 = addr.includes(':');
+  let prefix = null;
+  if (slash !== -1) {
+    const p = s.slice(slash + 1);
+    if (!/^\d{1,3}$/.test(p)) return null;
+    prefix = +p;
+    if (prefix > (isV6 ? 128 : 32)) return null;
+  }
+  if (isV6) {
+    const hex = v6ToHex(addr);
+    if (hex === null) return null;
+    return { isV6: true, value: prefix === null ? hex : v6Start(hex, prefix) };
+  }
+  const n = v4ToInt(addr);
+  if (n === null) return null;
+  return { isV6: false, value: prefix === null ? n : n - (n % Math.pow(2, 32 - prefix)) };
+}
+
+function esc(s) {
+  return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function analyze(ann) {
+  const sources = [], rules = [], codes = [];
+  for (const chunk of ann.split(';')) {
+    const t = chunk.trim();
+    const sp = t.indexOf(' ');
+    const name = sp === -1 ? t : t.slice(0, sp);
+    if (!sources.includes(name)) sources.push(name);
+    if (sp === -1) continue;
+    for (const r of t.slice(sp + 1).split(',')) {
+      const rule = r.trim();
+      if (!rule) continue;
+      const m = rule.match(/^\{([A-Z]{2})\}$/);
+      if (m) { if (!codes.includes(m[1])) codes.push(m[1]); continue; }
+      if (!rules.includes(rule)) rules.push(rule);
+    }
+  }
+  return { sources, rules, codes: codes.sort() };
+}
+
+function row(label, value) {
+  return '<tr><th>' + label + '</th><td>' + value + '</td></tr>';
+}
+
+function search() {
+  const raw = document.getElementById('q').value.trim();
+  const out = document.getElementById('out');
+  if (!raw) { out.innerHTML = ''; history.replaceState(null, '', location.pathname); return; }
+
+  const url = new URL(location.href);
+  url.searchParams.set('q', raw);
+  history.replaceState(null, '', url);
+
+  const q = parseQuery(raw);
+  if (!q) { out.innerHTML = '<h1>' + esc(raw) + '</h1><p class="empty">Некорректный адрес</p>'; return; }
+
+  const hit = lookup(q.isV6 ? v6 : v4, q.value);
+  if (!hit) { out.innerHTML = '<h1>' + esc(raw) + '</h1><p class="empty">Нет в списке</p>'; return; }
+
+  const { sources, rules, codes } = analyze(hit.ann);
+  let html = '<h1>' + esc(raw) + '</h1><table>';
+  html += row('Подсеть', '<span class="mono">' + esc(hit.cidr) + '</span>');
+  html += row('Страна', codes.map(c => '<span class="country">' + COUNTRIES[c][1] + COUNTRIES[c][0] + '</span>').join(''));
+  html += row('Источники', '<div class="tags">' + sources.map(s => '<span>' + esc(s) + '</span>').join('') + '</div>');
+  if (rules.length) html += row('Правила', '<div class="tags">' + rules.map(r => '<span>' + esc(r) + '</span>').join('') + '</div>');
+  out.innerHTML = html + '</table>';
+}
+
+async function boot() {
+  const hint = document.getElementById('hint');
+  const go = document.getElementById('go');
+  const q = document.getElementById('q');
+
+  document.getElementById('f').addEventListener('submit', e => { e.preventDefault(); search(); });
+
+  try {
+    const res = await fetch(DATA_URL, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    parseData(await res.text());
+    hint.textContent = (v4.cidr.length + v6.cidr.length).toLocaleString('ru-RU') + ' подсетей в ips-for-ru';
+    go.disabled = false;
+    const initial = new URL(location.href).searchParams.get('q');
+    if (initial) { q.value = initial; search(); }
+    q.focus();
+  } catch (e) {
+    hint.textContent = 'Не удалось загрузить список: ' + e.message;
+  }
+}
+
+boot();
+</script>
+</body>
+</html>

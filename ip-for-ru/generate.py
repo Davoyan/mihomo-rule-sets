@@ -26,7 +26,7 @@ FULL_DOMAIN = ["ya.ru", "yandex.net", "reg.ru", "mail.ru", "cloud.ru", "majordom
                "bestline.su", "tkmotel.ru", "skymaxsib.ru", "crimea.com", "sevstar.net", "sevtelecom.ru", "ubsnet.ru", "komfort21vek.ru", "avanta-telecom.ru", "reconn.ru",
                "airee.ru", "rusety.ru", "1city.org", "naukanet.ru", "ekma.is", "ekma-is.ru", "ugletele.com", "lds.online", "evpanet.com", "maximusnet.ru", "my-trinity.com",
                "antiddos.solutions", "miran.ru", "spd-mgts.ru", "volnamobile.ru", "yaltanet.ru", "onlinedn.ru", "novotelecom.ru", "profintel.ru", "vikscom.net", 
-               "tilda.cc", "tildacdn.com",]
+               "tilda.cc", "tildacdn.com", "tilda.ru", "tilda.kz", "tilda.by",]
 
 WANTED_AS = [
     # VK AND MAILRU

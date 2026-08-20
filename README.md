@@ -36,7 +36,7 @@
 ---
 ## Список IP адресов для маршрутизации внутри России.
 
-Список ip подсетей, сгенерированный из баз [IPinfo](https://ipinfo.io/data) + [MaxMind](https://github.com/P3TERX/GeoLite.mmdb/), а также из геофидов [geofeed-sources.txt](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/geofeed-sources.txt).
+Список ip подсетей, сгенерированный из баз [IPinfo](https://ipinfo.io/data) + [MaxMind](https://github.com/P3TERX/GeoLite.mmdb/), + геофидов [geofeed-sources.txt](https://github.com/Davoyan/mihomo-rule-sets/blob/main/ip-for-ru/geofeed-sources.txt).
 А так же из AS российских компаний, операторов или компаний связанных с Россией. Обновляется раз в сутки.
 
 Из чего формируется:

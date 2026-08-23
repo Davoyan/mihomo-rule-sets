@@ -79,7 +79,7 @@
 Если вы вдруг захотите меня поддержать деньгой:
 
 - **GRAM (TON): `UQCVlQkCHDJzlF0AfQmgvCa2rEASVG4gYAU6cAU_IR9qVQQs`**
-- **BTC: `bc1qxl05dhaxp5s3vpu4njx4mrzqfccqlhgfsp5dyu`**
-- **SOL (SPL): `3qT7wRUKXiTmpXvLuxT9J4STPZqEhWbVcn4NgZPyLMLi`**
-- **ETH (ERC20): `0x90DF7F6eD4d7d0bD8cA6790c0712D21f0a4da55D`**
-- **Tron(TRC20)/USDT: `TX8NzurextBLzRCnuQhxM6mzwNZ2LMbanE`**
+- **BTC: `bc1qr6yp275xhsph99r040lhe8ae5hkjpkx5ta0g7r`**
+- **SOL (SPL): `89g9rqRE8Hq6yE6NSiECCycjmv4vrQPrYzZDzoyRShq`**
+- **USDT (ERC20): `0x10255EbFbC434c32c8B4e885e96A4B4982B98849`**
+- **USDT (TRC20): `TK9oKk5AfcyDLzKWc96tGMwy4EGum72GiX`**

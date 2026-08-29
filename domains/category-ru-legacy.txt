@@ -5,18 +5,11 @@ domain:remanga.org
 domain:kinescope.io
 domain:kudago.com
 domain:by
-# Anime sites player checker
+
+# Anime/Movie RU sites player checker
 domain:kalarona.org
 domain:tomion.org
-
-# Direct for checkers of MAX
-
-domain:ipify.org
-domain:checkip.amazonaws.com
-domain:ifconfig.me
-
-
-# custom for easy checking
+domain:ceramet.net
 
 domain:2ip.ru
 

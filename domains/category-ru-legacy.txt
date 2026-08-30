@@ -1,4 +1,5 @@
 #Added by Davoyan
+domain:ruvds.com
 domain:lomont.site
 domain:shopstory.live
 domain:remanga.org

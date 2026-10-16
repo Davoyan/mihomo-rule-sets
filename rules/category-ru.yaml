@@ -16,6 +16,7 @@ payload:
     - +.2gis.ge
     - +.2gis.kg
     - +.2gis.kz
+    - +.2gis.tech
     - +.2gis.tj
     - +.2gis.ua
     - +.2gis.uz
@@ -25,6 +26,7 @@ payload:
     - +.4meeting.me
     - +.5post.market
     - +.absolutbank.com
+    - +.accesspoint.uz
     - +.acmvid.com
     - +.actualidad-rt.com
     - +.adsadvisor.io
@@ -114,6 +116,7 @@ payload:
     - +.cian.site
     - +.ciciq.net
     - +.cloudpayments.world
+    - +.cloudru.cn
     - +.clstorage.net
     - +.cm.expert
     - +.coloradogrowers.com
@@ -174,6 +177,7 @@ payload:
     - +.eadaily.info
     - +.eadaily.net
     - +.eadaily.org
+    - +.eaptechka.online
     - +.edadeal.io
     - +.edu22.info
     - +.eginvestments.net
@@ -232,6 +236,7 @@ payload:
     - +.genotek.eu
     - +.genotek.health
     - +.gerwin.io
+    - +.getsynapse.io
     - +.gib-global.com
     - +.gib.sg
     - +.gibdev.net
@@ -328,7 +333,17 @@ payload:
     - +.ixbt.site
     - +.ixbt.video
     - +.jinrieluosi.cn
+    - +.jivo.chat
+    - +.jivochat.co.in
+    - +.jivochat.co.za
     - +.jivochat.com
+    - +.jivochat.com.br
+    - +.jivochat.com.co
+    - +.jivochat.com.pe
+    - +.jivochat.com.tr
+    - +.jivochat.de
+    - +.jivochat.es
+    - +.jivochat.ng
     - +.jivosite.com
     - +.jump.finance
     - +.jump.taxi
@@ -461,6 +476,7 @@ payload:
     - +.nationalclearingcentre.com
     - +.naydex.net
     - +.ncc-qccp.com
+    - +.neon.click
     - +.netcraze.club
     - +.netcraze.link
     - +.netcraze.pro
@@ -637,12 +653,15 @@ payload:
     - +.sber.world
     - +.sber.ws
     - +.sberanalytics.com
+    - +.sberauto.com
     - +.sberbank-cib.com
     - +.sberbank-pb.com
+    - +.sberbank-tele.com
     - +.sberbank.co.in
     - +.sberbank.com
     - +.sberbankinvestmentresearch.com
     - +.sberbusiness.live
+    - +.sbercloud.tech
     - +.sbercoin.com
     - +.sberdocs.com
     - +.sberfinance.net
@@ -999,3 +1018,5 @@ payload:
     - +.yourgood.app
     - +.za-group.net
     - +.zentotem.net
+    - +.zvuk-b2b.com
+    - +.zvuk.com

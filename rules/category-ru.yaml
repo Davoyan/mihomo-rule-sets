@@ -81,7 +81,14 @@ payload:
     - +.baranky.com
     - +.bargipsy.com
     - +.beeline.tv
+    - +.beget.app
+    - +.beget.cloud
     - +.beget.com
+    - +.beget.de
+    - +.beget.hosting
+    - +.beget.pro
+    - +.beget.tech
+    - +.begetcdn.cloud
     - +.best2pay.net
     - +.beta-bank.com
     - +.billapp.org
@@ -717,6 +724,7 @@ payload:
     - +.spasibo.digital
     - +.spasibo.market
     - +.spbbank.com
+    - +.sprut.io
     - +.sputnikglobe.com
     - +.sputnikimages.com
     - +.sputnikmediabank.com
@@ -762,6 +770,8 @@ payload:
     - +.tildacdn.net
     - +.timeweb.cloud
     - +.timeweb.com
+    - +.timeweb.tech
+    - +.timewebcloud.kz
     - +.tinkoff-anketa.site
     - +.tinkoff-digital.com
     - +.tinkoff-group.com

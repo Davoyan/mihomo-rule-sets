@@ -29,6 +29,7 @@ payload:
     - +.accesspoint.uz
     - +.acmvid.com
     - +.actualidad-rt.com
+    - +.admkamyshin.info
     - +.adsadvisor.io
     - +.adygtelecom.com
     - +.ahilesva.info
@@ -83,6 +84,7 @@ payload:
     - +.bankonline.center
     - +.baranky.com
     - +.bargipsy.com
+    - +.barnaul.org
     - +.beeline.tv
     - +.beget.app
     - +.beget.cloud
@@ -170,6 +172,7 @@ payload:
     - +.dert.tech
     - +.dev-my.com
     - +.dev-my.games
+    - +.devmachine.ai
     - +.dodois.com
     - +.dodois.io
     - +.dodopizza.com
@@ -267,6 +270,7 @@ payload:
     - +.gismeteo.st
     - +.gogettaxi.org
     - +.goicq.org
+    - +.goodline.info
     - +.gorzdrav.org
     - +.goup.ai
     - +.gramotei.online
@@ -409,8 +413,11 @@ payload:
     - +.kaspersky.ro
     - +.kaspersky.rs
     - +.kaspersky.se
+    - +.kaspiysk.org
+    - +.kchr.info
     - +.keyboardmen.com
     - +.khangar.net
+    - +.khural.org
     - +.kinescope.io
     - +.kinescopecdn.net
     - +.kinorium.com
@@ -462,6 +469,7 @@ payload:
     - +.medsi.pro
     - +.medtrum.eu
     - +.megabitus.com
+    - +.megafon.cloud
     - +.megafon.com
     - +.megamarket.tech
     - +.mel.fm
@@ -490,6 +498,7 @@ payload:
     - +.mpgw-my.com
     - +.mradx.net
     - +.mts-ws.net
+    - +.murom.info
     - +.mvideo.edna.io
     - +.mvk.com
     - +.my-manager-account.com
@@ -516,6 +525,9 @@ payload:
     - +.noda.finance
     - +.noticias-rt.com
     - +.notimundo.press
+    - +.novoshakhtinsk.org
+    - +.ntagil.org
+    - +.o7.com
     - +.odnoklasniki.ua
     - +.odnoklassniki.am
     - +.odnoklassniki.co.ee
@@ -532,6 +544,7 @@ payload:
     - +.okolo.app
     - +.opennet.dev
     - +.oskelly.co
+    - +.oskol.city
     - +.ostin.com
     - +.otzovik.com
     - +.ozon.app
@@ -558,6 +571,7 @@ payload:
     - +.perevodkorona.com
     - +.pixonic.com
     - +.pobeda.page
+    - +.podryad.tv
     - +.polly.events
     - +.polza.ai
     - +.popmechanic.io
@@ -586,6 +600,7 @@ payload:
     - +.rbsuat.com
     - +.rbth.com
     - +.reaviz.com
+    - +.redcom.net
     - +.redheadsound.studio
     - +.reg.cloud
     - +.reg.com
@@ -654,6 +669,7 @@ payload:
     - +.ru.ccb.com
     - +.ru.com
     - +.ru.net
+    - +.rubtsovsk.org
     - +.rugpt.io
     - +.ruhub.tv
     - +.runewsrt.com
@@ -742,6 +758,7 @@ payload:
     - +.smotreshka.tv
     - +.smsemailstats.com
     - +.sn-esp.site
+    - +.sobranie.info
     - +.sokolov.io
     - +.sourcecraft.dev
     - +.sovcombank.business
@@ -1059,5 +1076,6 @@ payload:
     - +.za-group.net
     - +.zapishu.me
     - +.zentotem.net
+    - +.zsttk.net
     - +.zvuk-b2b.com
     - +.zvuk.com

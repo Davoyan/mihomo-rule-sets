@@ -5,6 +5,7 @@ domain:shopstory.live
 domain:remanga.org
 domain:kinescope.io
 domain:kudago.com
+domain:sinonim.org
 domain:by
 
 # Anime/Movie RU sites player checker
